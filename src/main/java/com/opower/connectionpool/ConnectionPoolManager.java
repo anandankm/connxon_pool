@@ -23,7 +23,8 @@ public class ConnectionPoolManager implements ConnectionPool {
     private String pass;
 
     /**
-     * list connections in the pool
+     * List of connections in the pool
+     *
      * list of connections currently used by the clients
      * list of connections available to the clients
     */
@@ -52,7 +53,8 @@ public class ConnectionPoolManager implements ConnectionPool {
         try {
             Class.forName(this.props.driverName);
         } catch (ClassNotFoundException e) {
-            throw new SQLException("Driver name " + this.props.driverName + " cannot be loaded. Make sure driver classpath is included.", e);
+            throw new SQLException("Driver name " + this.props.driverName + " cannot be loaded."
+                    + "Make sure driver classpath is included.", e);
         }
         for (int i = 0; i < this.props.initialSize; i++) {
             this.availableConnections.add(this.createNewConnection());
@@ -93,9 +95,9 @@ public class ConnectionPoolManager implements ConnectionPool {
     @Override
     public synchronized void releaseConnection(Connection connection) throws SQLException {
         if (!this.usedConnections.remove(connection)) {
-            throw new SQLException("Failed to release connection");
+            throw new SQLException("Failed to release connection. Connection is not being used by the pool.");
         }
-        this.availableConnections.add(connection);
+        this.availableConnections.addFirst(connection);
     }
 
     public Connection createNewConnection() throws SQLException {
@@ -106,7 +108,7 @@ public class ConnectionPoolManager implements ConnectionPool {
         Connection conn = null;
         synchronized(this) {
             if (!this.availableConnections.isEmpty()) {
-                conn = this.availableConnections.remove(0);
+                conn = this.availableConnections.removeFirst();
                 this.usedConnections.add(conn);
             }
         }
