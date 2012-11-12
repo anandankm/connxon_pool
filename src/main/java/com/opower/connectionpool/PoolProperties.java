@@ -24,14 +24,14 @@ public class PoolProperties {
     public int initialSize;
 
     /**
-     * Maxinum number of milliseconds @{link ConnectionPoolManager} waits for a connection to be available before throwing an exception, when maximum number of connections is reached.
+     * Maxinum number of milliseconds {@link ConnectionPoolManager} waits for a connection to be available before throwing an exception, when maximum number of connections is reached.
      */
     public int maxWait;
 
     /**
      * DEFAULT Values
      */
-    public static final String DEFAULT_DRIVERNAME = "com.jdbc.mysql.driver";
+    public static final String DEFAULT_DRIVERNAME = "com.mysql.jdbc.Driver";
 
     public static final int DEFAULT_MAX_CONNECTIONS = 50;
     public static final int DEFAULT_INITIAL_SIZE = 10;

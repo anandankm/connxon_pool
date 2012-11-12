@@ -32,6 +32,8 @@ public class ConnectionPoolManager implements ConnectionPool {
     private LinkedList<Connection> availableConnections = new LinkedList<Connection>();
 
     private PoolProperties props;
+    public void setProps(PoolProperties props) { this.props = props; }
+    public PoolProperties getProps() { return this.props; }
 
     public ConnectionPoolManager(PoolProperties props, String url, String user, String pass) throws SQLException {
         this.props = props;
