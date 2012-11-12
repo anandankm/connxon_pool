@@ -27,7 +27,6 @@ public class ConnectionPoolManager implements ConnectionPool {
      * list of connections currently used by the clients
      * list of connections available to the clients
     */
-    private LinkedList<Connection> connections = new LinkedList<Connection>();
     private LinkedList<Connection> usedConnections = new LinkedList<Connection>();
     private LinkedList<Connection> availableConnections = new LinkedList<Connection>();
 
@@ -55,6 +54,9 @@ public class ConnectionPoolManager implements ConnectionPool {
         } catch (ClassNotFoundException e) {
             throw new SQLException("Driver name " + this.props.driverName + " cannot be loaded. Make sure driver classpath is included.", e);
         }
+        for (int i = 0; i < this.props.initialSize; i++) {
+            this.availableConnections.add(this.createNewConnection());
+        }
     }
 
     /**
@@ -64,20 +66,18 @@ public class ConnectionPoolManager implements ConnectionPool {
      */
     @Override
     public Connection getConnection() throws SQLException {
-        if (!this.availableConnections.isEmpty()) {
-            return this.getFromAvailable();
+        Connection conn = this.getFromAvailable();
+        if (conn != null) {
+            return conn;
         } else {
-            if (this.usedConnections.size() < this.props.maxConnections) {
-                Connection conn = null;
-                synchronized(this) {
-                    conn = this.createNewConnection();
-                    this.usedConnections.add(conn);
-                }
+            conn = this.createAndAdd();
+            if (conn != null) {
                 return conn;
             } else {
                 this.waitForAvailable();
-                if (!this.availableConnections.isEmpty()) {
-                    return this.getFromAvailable();
+                conn = this.getFromAvailable();
+                if (conn != null) {
+                    return conn;
                 }
                 throw new SQLException("Number of maximum connections exceeded: " + this.props.maxConnections);
             }
@@ -92,6 +92,10 @@ public class ConnectionPoolManager implements ConnectionPool {
      */
     @Override
     public synchronized void releaseConnection(Connection connection) throws SQLException {
+        if (!this.usedConnections.remove(connection)) {
+            throw new SQLException("Failed to release connection");
+        }
+        this.availableConnections.add(connection);
     }
 
     public Connection createNewConnection() throws SQLException {
@@ -101,8 +105,21 @@ public class ConnectionPoolManager implements ConnectionPool {
     public Connection getFromAvailable() throws SQLException {
         Connection conn = null;
         synchronized(this) {
-            conn = this.availableConnections.remove(0);
-            this.usedConnections.add(conn);
+            if (!this.availableConnections.isEmpty()) {
+                conn = this.availableConnections.remove(0);
+                this.usedConnections.add(conn);
+            }
+        }
+        return conn;
+    }
+
+    public Connection createAndAdd() throws SQLException {
+        Connection conn = null;
+        synchronized(this) {
+            if (this.usedConnections.size() < this.props.maxConnections) {
+                conn = this.createNewConnection();
+                this.usedConnections.add(conn);
+            }
         }
         return conn;
     }
