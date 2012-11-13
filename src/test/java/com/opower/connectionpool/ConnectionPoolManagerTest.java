@@ -8,9 +8,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import static org.junit.Assert.fail;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.FileAppender;
 
 /**
  * Unit test for ConnectionPoolManager.
@@ -22,6 +27,7 @@ public class ConnectionPoolManagerTest
     public static final String TEST_TABLE = "opower_test";
     protected String testMysqlUser = "root";
     protected String testMysqlPass = "pass";
+    public static Logger log = Logger.getLogger(ConnectionPoolManagerTest.class);
 
     @Before
     public void setup() {
@@ -39,7 +45,7 @@ public class ConnectionPoolManagerTest
         } catch (SQLException e) {
             fail("Failed to setup database and connection pool. Exception: " + e.getMessage());
         }
-        System.out.println("Setup complete");
+        log.info("Setup complete");
     }
 
     protected void dbSetup(String url) throws SQLException {
@@ -68,6 +74,7 @@ public class ConnectionPoolManagerTest
         this.closeConnxon(conn);
     }
 
+    /*
     @Test
     public void propertiesTest() {
         Connection conn = this.getConnxFromPool();
@@ -89,9 +96,10 @@ public class ConnectionPoolManagerTest
         // Not reachable, since previous statement throws SQLException
         this.closeConnxon(conn);
     }
-
+*/
     @Test
     public void releaseToPoolTest() {
+        log.info("Starting releaseToPoolTest");
         PoolProperties props = this.poolManager.getProps();
         Connection conn = this.getConnxFromPool();
         assertEquals(1, this.poolManager.getNumUsedConnections());
@@ -104,10 +112,11 @@ public class ConnectionPoolManagerTest
         assertEquals(0, this.poolManager.getNumUsedConnections());
         assertEquals(props.initialSize, this.poolManager.getNumAvailConnections());
         this.closeConnxon(conn);
+        log.info("Done");
     }
 
     protected void sqlTest(Connection conn) {
-        String sql = "SELECT * FROM opower_test";
+        String sql = "SELECT * FROM opower_test1";
         ResultSet res = null;
         try {
             res = conn.createStatement().executeQuery(sql);
