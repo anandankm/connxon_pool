@@ -14,7 +14,7 @@ public class PoolProperties {
     public String driverName;
 
     /**
-     * Maximum number of connections that a {@link ConnectionPoolManager} should hold.
+     * Maximum number of connections that a {@link ConnectionPoolManager} can hold. Set this to -1 for unlimited connections 
      */
     public int maxConnections;
 
@@ -32,8 +32,7 @@ public class PoolProperties {
      * DEFAULT Values
      */
     public static final String DEFAULT_DRIVERNAME = "com.mysql.jdbc.Driver";
-
-    public static final int DEFAULT_MAX_CONNECTIONS = 50;
+    public static final int DEFAULT_MAX_CONNECTIONS = 30;
     public static final int DEFAULT_INITIAL_SIZE = 10;
     public static final int DEFAULT_MAX_WAIT = 3000; // 3 seconds
 
