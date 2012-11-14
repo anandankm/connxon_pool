@@ -3,60 +3,91 @@ package com.opower.connectionpool;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
+import java.sql.Driver;
 import java.util.LinkedList;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import org.apache.log4j.Logger;
 
 /**
- * Connection pool manager 
+ * Connection pool manager
  */
 public class ConnectionPoolManager implements ConnectionPool {
+
     /**
      * URL with [host] [port] [database] eg., "jdbc:mysql://localhost:3306/beluga?autoReconnect=true"
      */
     private String url;
-    public String getUrl() { return this.url; }
+    public String getUrl() {
+        return this.url;
+    }
     /**
      * Username to connect to the database
      */
     private String user;
-    public String getUser() { return this.user; }
+    public String getUser() {
+        return this.user;
+    }
     /**
      * Password to connect to the database
      */
     private String pass;
-    public String getPass() { return this.pass; }
+    public String getPass() {
+        return this.pass;
+    }
+
+    private Driver driver = null;
+    public Driver getDriver() { return this.driver; }
 
     /**
-     * List of connections in the pool
-     *
-     * list of connections currently used by the clients
-     * list of connections available to the clients
+     * Logger
      */
-    private LinkedList<Connection> usedConnections = new LinkedList<Connection>();
-    private LinkedList<Connection> availableConnections = new LinkedList<Connection>();
+    public static final Logger log = Logger.getLogger(ConnectionPoolManager.class);
 
     /**
-     * Connections lock
+     * Size of the pool at any given time.
+     * Incremented only at two places
+     * One at {@link #createAndAdd}, when we create new connection
+     * if no connection is available and another at {@link #initializePool},
+     * when a new {@link ConnectionPoolManager} is instantiated.
      */
-    private Object connxnsLock = new Object();
-    private Object usedConnxnsLock = new Object();
-    private Object availConnxnsLock = new Object();
+    private AtomicInteger size = new AtomicInteger(0);
+
+    /**
+     * Atomic Flag to see if pool is closed
+     */
+    private AtomicBoolean closed = new AtomicBoolean(false);
+
+    /**
+     * List of connections currently used by the clients
+     */
+    private BlockingQueue<Connection> busyConnections;
+
+    /**
+     * List of connections available to the clients
+     */
+    private BlockingQueue<Connection> availableConnections;
 
     /**
      * Pool properties for this instance of {@link ConnectionPoolManager}
      */
-    private PoolProperties props;
-    public void setProps(PoolProperties props) { this.props = props; }
-    public PoolProperties getProps() { return this.props; }
+    private PoolConfiguration props;
+    public void setProps(PoolConfiguration props) { this.props = props; }
+    public PoolConfiguration getProps() { return this.props; }
 
     /**
-     * Constructor with a given {@link PoolProperties}
+     * Constructor with a given {@link PoolConfiguration}
      */
-    public ConnectionPoolManager(PoolProperties props, String url, String user, String pass) throws SQLException {
+    public ConnectionPoolManager(PoolConfiguration props, String url, String user, String pass) throws SQLException {
         this.props = props;
         this.url = url;
         this.user = user;
         this.pass = pass;
-        this.createConnectionPool();
+        this.initializePool();
     }
 
     /**
@@ -69,15 +100,52 @@ public class ConnectionPoolManager implements ConnectionPool {
     /**
      * Initialize connection pool with {@link PoolProperties}.initialSize
      */
-    private void createConnectionPool() throws SQLException {
+    protected void initializePool() throws SQLException {
+
         try {
-            Class.forName(this.props.driverName);
-        } catch (ClassNotFoundException e) {
-            throw new SQLException("Driver name " + this.props.driverName + " cannot be loaded."
-                    + "Make sure driver classpath is included.", e);
+            this.propertiesCheck();
+        } catch (PoolConfigurationException e) {
+            throw new SQLException("Failed to initialize a Connection Pool", e);
         }
-        for (int i = 0; i < this.props.initialSize; i++) {
-            this.availableConnections.add(this.createNewConnection());
+
+        this.availableConnections = new ArrayBlockingQueue<Connection>(this.props.getMaxConnections(), true);
+        this.busyConnections = new ArrayBlockingQueue<Connection>(this.props.getMaxConnections(), false);
+
+        for (int i = 0; i < this.props.getInitialSize(); i++) {
+            this.availableConnections.offer(this.createNewConnection());
+            this.size.addAndGet(1);
+        }
+    }
+
+    /**
+     * Sanity check for current {@link PoolConfiguration} properties
+     */
+    protected void propertiesCheck() throws PoolConfigurationException {
+        if (this.props == null) {
+            throw new PoolConfigurationException("Properties for the pool needs to be defined using " + PoolConfiguration.class);
+        }
+        try {
+            this.driver = (Driver) Class.forName(
+                                                this.props.getDriverName(),
+                                                true,
+                                                this.getClass().getClassLoader()
+                                                ).newInstance();
+        } catch (Exception e) {
+            throw new PoolConfigurationException(
+                    "Driver " + this.props.getDriverName() + " cannot be loaded." +
+                    "Make sure driver classpath is included.", e);
+        }
+        if (this.props.getMaxConnections() <= 0) {
+            log.warn("Maximum connections in the properties is <= 0. Setting it to default: " + PoolProperties.DEFAULT_MAX_CONNECTIONS);
+            this.props.setMaxConnections(PoolProperties.DEFAULT_MAX_CONNECTIONS);
+        }
+        if (this.props.getInitialSize() > this.props.getMaxConnections() || this.props.getInitialSize() < 0) {
+            log.warn("Initial size is " + this.props.getInitialSize() + ". Setting it to default: " + PoolProperties.DEFAULT_INITIAL_SIZE);
+            this.props.setInitialSize(PoolProperties.DEFAULT_INITIAL_SIZE);
+        }
+        if (this.props.getMaxWait() <= 10) {
+            log.warn("Maximum wait to throw an exception is set to less than 10. Setting it to default: " + PoolProperties.DEFAULT_MAX_WAIT);
+            this.props.setMaxWait(PoolProperties.DEFAULT_MAX_WAIT);
         }
     }
 
@@ -86,8 +154,11 @@ public class ConnectionPoolManager implements ConnectionPool {
      */
     @Override
     public Connection getConnection() throws SQLException {
+        if (this.isClosed()) {
+            throw new SQLException("Connection pool closed");
+        }
         // Immediately return if a connection is available
-        Connection conn = this.getFromAvailable();
+        Connection conn = this.waitAndGet(0);
         if (conn != null) {
             // w00t!!
             return conn;
@@ -98,22 +169,118 @@ public class ConnectionPoolManager implements ConnectionPool {
                 return conn;
             } else {
                 // Wait maxWait seconds for other threads to release a connection
-                try {
-                    this.waitForAvailable();
-                } catch (InterruptedException e) {
-                    throw new SQLException("Interrupted by someone.", e);
+                long start = System.currentTimeMillis();
+                conn = this.waitAndGet(this.props.getMaxWait());
+                if (conn == null) {
+                    if (System.currentTimeMillis() - start >= this.props.getMaxWait()) {
+                        if (log.isDebugEnabled()) {
+                            log.debug(this.capacityInfo("Timed out.", "\n"));
+                        }
+                        throw new SQLException("No available connection after waiting for " + (this.props.getMaxWait()/1000) + " seconds.");
+                    }
                 }
-                conn = this.getFromAvailable();
-                if (conn != null) {
-                    return conn;
-                }
+
             }
         }
         if (conn == null) {
-            // if for some reason. Yikes!
-            throw new SQLException("Failed to retrieve a valid connection from the pool.");
+            if (this.isClosed()) {
+                throw new SQLException("Connection pool closed");
+            } else {
+                // Capacity exceeded?
+                if (log.isDebugEnabled()) {
+                    log.debug(this.capacityInfo("Capacity might have been exceeded", "\n"));
+                }
+                throw new SQLException("Failed to retrieve a valid connection from the pool.");
+            }
         } else {
             return conn;
+        }
+    }
+
+    /**
+     * Wait for an available valid connection and return one, if any.
+     * If the connection is closed, try to reconnect it.
+     * Otherwise remove it from busy queue and
+     * return null, so the calling function can attempt to create a new one.
+     *
+     * @return {@link java.sql.Connection}
+     */
+    protected Connection waitAndGet(int wait) throws SQLException {
+        Connection conn = null;
+        try {
+            conn = this.availableConnections.poll(wait, TimeUnit.MILLISECONDS);
+            if (!this.offerToBusy(conn)) {
+                return null;
+            }
+        } catch (InterruptedException e) {
+            throw new SQLException("Connection pool wait interrupted before " + wait + " milliseconds");
+        }
+        if (conn != null && conn.isClosed()) {
+            if (!this.reconnect(conn)) {
+                if (!this.busyConnections.remove(conn)) {
+                    if (log.isDebugEnabled()) {
+                        log.debug(this.capacityInfo("Cannot remove Connection[" + conn +"] from busy connections.", "\n"));
+                    }
+                }
+                conn = null;
+            }
+        }
+        return conn;
+    }
+
+    protected Connection createAndAdd() throws SQLException {
+        if (this.size.get() >= this.props.getMaxConnections()) {
+            return null;
+        }
+        Connection conn = this.createNewConnection();
+        if (!this.offerToBusy(conn)) {
+            return null;
+        } else {
+            this.size.addAndGet(1);
+            return conn;
+        }
+    }
+
+    protected void reconnect(Connection conn) throws SQLException {
+        this.disconnect(conn);
+        if (this.driver != null) {
+            this.props.updateURLProperties(this.user, this.pass);
+            conn = this.driver.connect(this.url, this.props.getURLProperties());
+            return true;
+        }
+        return false;
+    }
+
+    protected boolean disconnect(Connection conn) throws SQLException {
+        if (conn != null) {
+            conn.close();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Create a brand new connection.
+     *
+     * @return {@link java.sql.Connection}
+     */
+    protected Connection createNewConnection() throws SQLException {
+        return DriverManager.getConnection(this.url, this.user, this.pass);
+    }
+
+
+    private boolean offerToBusy(Connection conn) {
+        if (conn == null) {
+            return false;
+        }
+        if (!this.busyConnections.offer(conn)) {
+            if (log.isDebugEnabled()) {
+                log.debug("Capacity exceeded!!");
+            }
+            return false;
+        } else {
+            return true;
         }
     }
 
@@ -125,97 +292,82 @@ public class ConnectionPoolManager implements ConnectionPool {
         if (connection == null) {
             return;
         }
-        boolean notRemoved = false;
-        synchronized(this.connxnsLock) {
-            if (!this.usedConnections.remove(connection)) {
-                notRemoved = true;
-            } else {
-                if (connection.isClosed()) {
-                    connection = createNewConnection();
+        if (this.isClosed()) {
+            this.disconnect(connection);
+            return;
+        }
+        boolean closeConnection = true;
+        if (this.busyConnections.remove(connection)) {
+            // Connection belongs to the pool. Decrement pool size
+            this.size.decrementAndGet();
+            if (this.size.get() >= this.props.getMaxConnections()) {
+                if (log.isDebugEnabled()) {
+                    log.debug(this.capacityInfo("Maximum connections size exceeded. Cannot release Connection[" + connection + "] to the pool. Closing it.", "\n"));
                 }
-                this.availableConnections.addFirst(connection);
+            } else if (!this.availableConnections.offer(connection)) {
+                // Capacity exceeded?
+                if (log.isDebugEnabled()) {
+                    log.debug(this.capacityInfo("Available connections size exceeded. Cannot release Connection[" + connection + "] to the pool. Closing it.", "\n"));
+                }
+            } else {
+                // everything went fine. Connection released to the pool.
+                closeConnection = false;
             }
-            this.connxnsLock.notifyAll();
-        }
-        if (notRemoved) {
-            throw new SQLException("Failed to release connection. Connection is not being used by the pool.");
-        }
-    }
-
-    /**
-     * Client thread waits on connxnsLock for {@link PoolProperties}.maxWait milliseconds
-     *
-     * @exception SQLException if connxnsLock.wait({@link PoolProperties}.maxWait) exceeded.
-     */
-    public void waitForAvailable() throws InterruptedException, SQLException {
-        long start = System.currentTimeMillis();
-        synchronized(this.connxnsLock) {
-            this.connxnsLock.wait(this.props.maxWait);
-        }
-        if (System.currentTimeMillis() - start >= this.props.maxWait) {
-            throw new SQLException("No available connections in the pool for the past " + this.props.maxWait + " milliseconds.");
-        }
-    }
-
-    /**
-     * Create a brand new connection.
-     *
-     * @return {@link java.sql.Connection}
-     */
-    public Connection createNewConnection() throws SQLException {
-        return DriverManager.getConnection(this.url, this.user, this.pass);
-    }
-
-
-    public Connection getFromAvailable() throws SQLException {
-        Connection conn = null;
-        synchronized(this.connxnsLock) {
-            if (!this.availableConnections.isEmpty()) {
-                conn = this.availableConnections.removeFirst();
-                this.usedConnections.add(conn);
+        } else {
+            if (log.isDebugEnabled()) {
+                log.debug(this.capacityInfo("Failed to release a connection (Does not belong to the pool). Connection [" + connection + "] will be closed", "\n"));
             }
         }
-        return conn;
-    }
-
-    public Connection createAndAdd() throws SQLException {
-        Connection conn = null;
-        synchronized(this.connxnsLock) {
-            int totalSize = this.usedConnections.size() + this.availableConnections.size();
-            if ((this.props.maxConnections == -1) || (totalSize < this.props.maxConnections)) {
-                conn = this.createNewConnection();
-                this.usedConnections.add(conn);
-            }
+        if (closeConnection) {
+            connection.close();
         }
-        return conn;
     }
 
     /**
-     * Asynchronous read on used connections size
+     * Get the size of this pool.
      *
-     * @return int - number of used connections
+     * @return size - Thread safe read on the {@link #size size} of the pool
      */
-    public int getNumUsedConnections() {
-        return this.usedConnections.size();
+    public int getSize() {
+        return this.size.get();
     }
 
     /**
-     * Asynchronous read on available connections size
+     * See if the current pool is closed and not usable.
+     * Thread safe read on the {@link #close close} of the pool
      *
-     * @return int - number of available connections
+     * @return true if the connection pool has been closed
      */
-    public int getNumAvailConnections() {
+    public boolean isClosed() {
+        return this.closed.get();
+    }
+
+    /**
+     * Get number of busy/used connections in this pool
+     *
+     * @return int - number of busy connections
+     */
+    public int getBusySize() {
+        return this.busyConnections.size();
+    }
+
+    /**
+     * Get number of available connections from this pool
+     *
+     * @return int number of available connections
+     */
+    public int getAvailableSize() {
         return this.availableConnections.size();
     }
 
     /**
-     * Asynchronous check if a connection belongs to a pool
+     * Check if a connection belongs to a pool
      *
      * @param Connection - connection to check
-     * @return boolean - belongs to the pool or not
+     * @return boolean true if the connection belongs to the pool
      */
     public boolean containsConnection(Connection connection) {
-        if (this.usedConnections.contains(connection)) {
+        if (this.busyConnections.contains(connection)) {
             return true;
         } else if (this.availableConnections.contains(connection))  {
             return true;
@@ -224,21 +376,31 @@ public class ConnectionPoolManager implements ConnectionPool {
     }
 
     /**
-     * Close and Clear all connections owned by this pool
+     * Closes and Clears all connections owned by this pool
      */
-
-    public boolean clear() throws SQLException {
-        synchronized(this.connxnsLock) {
-            if (!usedConnections.isEmpty()) {
-                throw new SQLException("Connections are in use. Release them before clearing the connection pool");
-            }
-            for (Connection conn : this.availableConnections) {
-                if (conn != null) {
-                    conn.close();
+    public void close() throws SQLException {
+        if (this.isClosed()) {
+            return;
+        }
+        this.closed.set(true);
+        BlockingQueue<Connection> pooledConnections = this.availableConnections;
+        if (pooledConnections.size() == 0) {
+            pooledConnections = busyConnections;
+        }
+        while (pooledConnections.size() > 0) {
+            Connection conn = pooledConnections.poll(1, TimeUnit.SECONDS);
+            if (pooledConnections == this.availableConnections) {
+                this.disconnect(conn);
+                if (pooledConnections.size() == 0) {
+                    pooledConnections = busyConnections;
                 }
             }
-            this.availableConnections.clear();
         }
-        return true;
+    }
+
+    public String capacityInfo(String prefix, String delimiter) {
+        return prefix + delimiter +
+            "\tCurrent Capacity: " + this.size.get() + "; Specified Capacity: " + this.props.getMaxConnections() + delimiter +
+            "\tAvailable Connections: " + this.availableConnections.size() + "; Busy Connections: " + this.busyConnections.size();
     }
 }
