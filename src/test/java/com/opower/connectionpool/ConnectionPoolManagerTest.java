@@ -20,14 +20,21 @@ import org.apache.log4j.FileAppender;
 /**
  * Unit test for ConnectionPoolManager.
  */
-public class ConnectionPoolManagerTest 
+public class ConnectionPoolManagerTest
 {
     protected ConnectionPoolManager poolManager;
     public static final String TEST_DB = "opower_connxn";
     public static final String TEST_TABLE = "opower_test";
     protected String testMysqlUser = "root";
     protected String testMysqlPass = "pass";
-    public static Logger log = Logger.getLogger(ConnectionPoolManagerTest.class);
+    public static final Logger log = Logger.getLogger(ConnectionPoolManagerTest.class);
+
+    @BeforeClass
+    public static void logging() {
+        log.info("--------------------------");
+        log.info("-  CONNECTION POOL TEST  -");
+        log.info("--------------------------");
+    }
 
     @Before
     public void setup() {
@@ -43,16 +50,16 @@ public class ConnectionPoolManagerTest
             url = "jdbc:mysql://localhost:3306/" + TEST_DB + "?allowMultiQueries=true";
             this.poolManager = new ConnectionPoolManager(url, testMysqlUser, testMysqlPass);
         } catch (SQLException e) {
+            log.error("Failed to setup database and connection pool", e);
             fail("Failed to setup database and connection pool. Exception: " + e.getMessage());
         }
-        log.info("Setup complete");
     }
 
     protected void dbSetup(String url) throws SQLException {
         Connection conn = DriverManager.getConnection(url, testMysqlUser, testMysqlPass);
-        String dbSetupSql = "DROP DATABASE IF EXISTS " + TEST_DB + "; " + 
+        String dbSetupSql = "DROP DATABASE IF EXISTS " + TEST_DB + "; " +
 
-            "CREATE DATABASE " + TEST_DB + "; " + 
+            "CREATE DATABASE " + TEST_DB + "; " +
 
             "USE  " + TEST_DB + "; " +
 
@@ -69,54 +76,61 @@ public class ConnectionPoolManagerTest
 
     @Test
     public void getConnectionTest() {
+        log.info("Starting getConnectionTest()");
         Connection conn = this.getConnxFromPool();
         this.sqlTest(conn);
+        log.info("Connection String: " + conn.toString());
         this.closeConnxon(conn);
+        log.info("Finished getConnectionTest()");
     }
 
-    /*
     @Test
     public void propertiesTest() {
+        log.info("Starting propertiesTest()");
         Connection conn = this.getConnxFromPool();
         assertTrue(this.poolManager.containsConnection(conn));
-        PoolProperties props = this.poolManager.getProps();
-        assertEquals(1, this.poolManager.getNumUsedConnections());
-        assertEquals(props.initialSize - 1, this.poolManager.getNumAvailConnections());
+        PoolConfiguration props = this.poolManager.getProps();
+        assertEquals(1, this.poolManager.getBusySize());
+        assertEquals(props.getInitialSize() - 1, this.poolManager.getAvailableSize());
         this.closeConnxon(conn);
+        log.info("Finished propertiesTest()");
     }
 
     @Test (expected=SQLException.class)
     public void maxConnectionsTest() throws SQLException {
-        PoolProperties props = this.poolManager.getProps();
-        for (int i = 0; i < props.maxConnections; i++) {
+        log.info("Starting maxConnectionsTest()");
+        PoolConfiguration props = this.poolManager.getProps();
+        for (int i = 0; i < props.getMaxConnections(); i++) {
             Connection conn = this.getConnxFromPool();
             this.closeConnxon(conn);
         }
+        log.info("Finished maxConnectionsTest()");
         Connection conn = this.poolManager.getConnection();
         // Not reachable, since previous statement throws SQLException
         this.closeConnxon(conn);
     }
-*/
+
     @Test
     public void releaseToPoolTest() {
-        log.info("Starting releaseToPoolTest");
-        PoolProperties props = this.poolManager.getProps();
+        log.info("Starting releaseToPoolTest()");
+        PoolConfiguration props = this.poolManager.getProps();
         Connection conn = this.getConnxFromPool();
-        assertEquals(1, this.poolManager.getNumUsedConnections());
-        assertEquals(props.initialSize - 1, this.poolManager.getNumAvailConnections());
+        assertEquals(1, this.poolManager.getBusySize());
+        assertEquals(props.getInitialSize() - 1, this.poolManager.getAvailableSize());
         try {
             this.poolManager.releaseConnection(conn);
         } catch (SQLException e) {
+            log.error(e);
             fail("Failed to release connection. Exception: " + e.getMessage());
         }
-        assertEquals(0, this.poolManager.getNumUsedConnections());
-        assertEquals(props.initialSize, this.poolManager.getNumAvailConnections());
+        assertEquals(0, this.poolManager.getBusySize());
+        assertEquals(props.getInitialSize(), this.poolManager.getAvailableSize());
         this.closeConnxon(conn);
-        log.info("Done");
+        log.info("Finished releaseToPoolTest()");
     }
 
     protected void sqlTest(Connection conn) {
-        String sql = "SELECT * FROM opower_test1";
+        String sql = "SELECT * FROM opower_test";
         ResultSet res = null;
         try {
             res = conn.createStatement().executeQuery(sql);
@@ -128,6 +142,7 @@ public class ConnectionPoolManagerTest
             assertEquals("Opower", res.getString(2));
             res.close();
         } catch (SQLException e)  {
+            log.error(e);
             fail("Failed to execute query: " + sql + ". Exception: " + e.getMessage());
         }
     }
@@ -137,6 +152,7 @@ public class ConnectionPoolManagerTest
         try {
             conn = this.poolManager.getConnection();
         } catch (SQLException e) {
+            log.error(e);
             fail("Failed to get connection from pool. Exception: " + e.getMessage());
         }
         return conn;
@@ -146,6 +162,7 @@ public class ConnectionPoolManagerTest
         try {
             conn.close();
         } catch (SQLException e) {
+            log.error(e);
             fail("Failed to close connection. Exception: " + e.getMessage());
         }
     }
