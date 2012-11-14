@@ -7,8 +7,8 @@ import java.util.Properties;
  */
 public interface PoolConfiguration {
 
-    public static final int RECONNECT_USER_PROP = "user";
-    public static final int RECONNECT_PASSWORD_PROP = "password";
+    public static final String RECONNECT_USER_PROP = "user";
+    public static final String RECONNECT_PASSWORD_PROP = "password";
 
     /**
      * Drivername to be used by the pool to make a connection.
@@ -106,5 +106,7 @@ public interface PoolConfiguration {
      * @param - props: {@link java.util.Properties} to be used to set the pool properties
      */
     public void setUsingProperties(Properties props);
+
+    public void updateURLProperties(String user, String pass);
 
 }

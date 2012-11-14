@@ -241,7 +241,7 @@ public class ConnectionPoolManager implements ConnectionPool {
         }
     }
 
-    protected void reconnect(Connection conn) throws SQLException {
+    protected boolean reconnect(Connection conn) throws SQLException {
         this.disconnect(conn);
         if (this.driver != null) {
             this.props.updateURLProperties(this.user, this.pass);
@@ -378,7 +378,7 @@ public class ConnectionPoolManager implements ConnectionPool {
     /**
      * Closes and Clears all connections owned by this pool
      */
-    public void close() throws SQLException {
+    public void close() throws SQLException, InterruptedException {
         if (this.isClosed()) {
             return;
         }

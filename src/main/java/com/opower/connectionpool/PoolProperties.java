@@ -135,7 +135,7 @@ public class PoolProperties implements PoolConfiguration {
         if (this.URLProperties != null) {
             this.URLProperties = new Properties(this.URLProperties);
         } else {
-            this.URLproperties = new Properties();
+            this.URLProperties = new Properties();
         }
         this.URLProperties.setProperty(PoolConfiguration.RECONNECT_USER_PROP, user);
         this.URLProperties.setProperty(PoolConfiguration.RECONNECT_PASSWORD_PROP, pass);
@@ -146,7 +146,7 @@ public class PoolProperties implements PoolConfiguration {
      */
     @Override
     public Properties getURLProperties() {
-        return this.URLproperties;
+        return this.URLProperties;
     }
 
     /**
