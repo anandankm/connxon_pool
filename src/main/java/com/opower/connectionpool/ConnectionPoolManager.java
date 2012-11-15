@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
 import java.sql.Driver;
+import java.util.Properties;
 import java.util.LinkedList;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -73,6 +74,17 @@ public class ConnectionPoolManager implements ConnectionPool {
     private BlockingQueue<Connection> availableConnections;
 
     /**
+     * A runnable implementation that releases connections
+     * periodically.
+     */
+    private ConnectionReleaser releaser;
+
+    /**
+     * Thread that runs with {@link ConnectionReleaser} implementation
+     */
+    private Thread releaserThread;
+
+    /**
      * Pool properties for this instance of {@link ConnectionPoolManager}
      */
     private PoolConfiguration props;
@@ -88,6 +100,13 @@ public class ConnectionPoolManager implements ConnectionPool {
         this.user = user;
         this.pass = pass;
         this.initializePool();
+    }
+
+    /**
+     * Constructor with a given {@link java.util.Properties}
+     */
+    public ConnectionPoolManager(Properties props, String url, String user, String pass) throws SQLException {
+        this(new PoolProperties(props), url, user, pass);
     }
 
     /**
@@ -108,12 +127,22 @@ public class ConnectionPoolManager implements ConnectionPool {
             throw new SQLException("Failed to initialize a Connection Pool", e);
         }
 
-        this.availableConnections = new ArrayBlockingQueue<Connection>(this.props.getMaxConnections(), true);
-        this.busyConnections = new ArrayBlockingQueue<Connection>(this.props.getMaxConnections(), false);
+        this.availableConnections =
+            new ArrayBlockingQueue<Connection>(this.props.getMaxConnections(), true);
+        this.busyConnections =
+            new ArrayBlockingQueue<Connection>(this.props.getMaxConnections(), false);
 
         for (int i = 0; i < this.props.getInitialSize(); i++) {
             this.availableConnections.offer(this.createNewConnection());
             this.size.addAndGet(1);
+        }
+        if (this.props.getRunReleaser()) {
+            releaser = new ConnectionReleaser(this);
+            releaser.setBusyConnections(this.busyConnections);
+            releaserThread = new Thread(releaser);
+            releaserThread.start();
+        } else {
+            log.info("Not running ConnectionReleaser");
         }
     }
 
@@ -176,10 +205,9 @@ public class ConnectionPoolManager implements ConnectionPool {
                         if (log.isDebugEnabled()) {
                             log.debug(this.capacityInfo("Timed out.", "\n"));
                         }
-                        throw new SQLException("No available connection after waiting for " + (this.props.getMaxWait()/1000) + " seconds.");
+                        throw new SQLException("Timed out. No available connection after waiting for " + (this.props.getMaxWait()/1000) + " seconds.");
                     }
                 }
-
             }
         }
         if (conn == null) {
@@ -209,21 +237,24 @@ public class ConnectionPoolManager implements ConnectionPool {
         Connection conn = null;
         try {
             conn = this.availableConnections.poll(wait, TimeUnit.MILLISECONDS);
-            if (!this.offerToBusy(conn)) {
-                return null;
+            if (wait > 0) {
+                log.debug("Waited for: " + wait);
+                if (conn != null && conn.isClosed()) {
+                    log.debug("Connection is closed: " + conn);
+                }
             }
         } catch (InterruptedException e) {
             throw new SQLException("Connection pool wait interrupted before " + wait + " milliseconds");
         }
         if (conn != null && conn.isClosed()) {
             if (!this.reconnect(conn)) {
-                if (!this.busyConnections.remove(conn)) {
-                    if (log.isDebugEnabled()) {
-                        log.debug(this.capacityInfo("Cannot remove Connection[" + conn +"] from busy connections.", "\n"));
-                    }
-                }
                 conn = null;
+            } else {
+                log.debug("Reconnected..");
             }
+        }
+        if (!this.offerToBusy(conn)) {
+            return null;
         }
         return conn;
     }
@@ -270,8 +301,8 @@ public class ConnectionPoolManager implements ConnectionPool {
     }
 
 
-    private boolean offerToBusy(Connection conn) {
-        if (conn == null) {
+    private boolean offerToBusy(Connection conn) throws SQLException  {
+        if (conn == null || conn.isClosed()) {
             return false;
         }
         if (!this.busyConnections.offer(conn)) {
@@ -378,23 +409,41 @@ public class ConnectionPoolManager implements ConnectionPool {
     /**
      * Closes and Clears all connections owned by this pool
      */
-    public void close() throws SQLException, InterruptedException {
+    public void close() throws SQLException {
         if (this.isClosed()) {
             return;
         }
         this.closed.set(true);
+        this.size.set(this.props.getMaxConnections());
         BlockingQueue<Connection> pooledConnections = this.availableConnections;
         if (pooledConnections.size() == 0) {
             pooledConnections = busyConnections;
         }
         while (pooledConnections.size() > 0) {
-            Connection conn = pooledConnections.poll(1, TimeUnit.SECONDS);
+            Connection conn = null;
+            try {
+                conn = pooledConnections.poll(1, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(this.capacityInfo("Cannot close connection pool. Interrupted. Exception:\n" + e.getMessage(), "\n"));
+                }
+                throw new SQLException("Cannot close Connection Pool. Interrupted.", e);
+            }
             if (pooledConnections == this.availableConnections) {
                 this.disconnect(conn);
                 if (pooledConnections.size() == 0) {
                     pooledConnections = busyConnections;
                 }
             }
+        }
+        if (this.props.getRunReleaser() && this.releaserThread != null && this.releaserThread.isAlive()) {
+            log.debug("Waiting for Releaser to join");
+            try {
+                this.releaserThread.join();
+            } catch (InterruptedException e) {
+                log.error(e);
+            }
+            log.debug("Releaser joined");
         }
     }
 
