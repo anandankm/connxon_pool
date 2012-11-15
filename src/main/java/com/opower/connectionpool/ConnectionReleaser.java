@@ -43,22 +43,22 @@ public class ConnectionReleaser implements Runnable
             if (this.pool.isClosed()) {
                return;
             }
-            if( ((System.currentTimeMillis() - this.lastRun) > this.timeBetweenRuns) &&
-                    this.busyConnections != null &&
-                    this.busyConnections.size() > 0
-              ) {
-
-                Connection conn = this.busyConnections.peek();
-                try {
-                    if (conn != null && conn.isClosed()) {
-                        this.pool.releaseConnection(conn);
-                        log.debug("Connection Released by ConnectionReleaser: " + conn);
+            if(((System.currentTimeMillis() - this.lastRun) > this.timeBetweenRuns)) {
+                if (this.busyConnections != null && this.busyConnections.size() > 0) {
+                    for (int i = 0; i < this.busyConnections.size(); i++) {
+                        Connection conn = this.busyConnections.peek();
+                        try {
+                            if (conn != null && conn.isClosed()) {
+                                this.pool.releaseConnection(conn);
+                                log.debug("Connection Released by ConnectionReleaser: " + conn);
+                            }
+                        } catch (SQLException e) {
+                            log.error("Connection could not be released to the pool", e);
+                        }
                     }
-                } catch (SQLException e) {
-                    log.error("Connection could not be released to the pool", e);
-                }// try
-                this.lastRun = System.currentTimeMillis();
-              }// if
-        }
+                    this.lastRun = System.currentTimeMillis();
+                }
+            }
+        }//while
     }
 }
