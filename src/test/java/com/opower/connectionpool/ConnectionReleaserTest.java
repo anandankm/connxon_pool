@@ -34,12 +34,12 @@ public class ConnectionReleaserTest
     private ConnectionPoolManager poolManager;
     private PoolConfiguration poolProps;
     private PoolHelper poolHelper;
-    public static final Logger log = Logger.getLogger(ConnectionPoolManagerTest.class);
+    public static final Logger log = Logger.getLogger(ConnectionReleaserTest.class);
 
     @BeforeClass
     public static void testSetup() throws SQLException, IOException {
         log.info("-----------------------------------");
-        log.info("-  CONNECTION POOL RELEASER TEST  -");
+        log.info("-       POOL RELEASER TEST        -");
         log.info("-----------------------------------");
         SetupHelper.getProperties();
         SetupHelper.dbSetup();
@@ -81,7 +81,7 @@ public class ConnectionReleaserTest
     @Test
     public void testMultipleClients() {
         log.info("Starting multiple clients test");
-        int numClients = 30;
+        int numClients = 40;
         LinkedList<Thread> clients = new LinkedList<Thread>();
         Random random = new Random();
         for (int i = 0; i < numClients; i++) {
@@ -108,8 +108,12 @@ public class ConnectionReleaserTest
             }
             if (clientDead) {
                 clients.removeFirst();
+                assertTrue(this.poolManager.getSize() == this.poolManager.getAvailableSize() + this.poolManager.getBusySize());
+                assertTrue(this.poolManager.getSize() <= this.poolProps.getMaxConnections());
+                assertTrue(this.poolManager.getAvailableSize() + this.poolManager.getBusySize() <= this.poolProps.getMaxConnections());
             }
         }
+        log.info(this.poolManager.capacityInfo("Final count.", "\n"));
         log.info("Finished multiple clients test");
     }
 }

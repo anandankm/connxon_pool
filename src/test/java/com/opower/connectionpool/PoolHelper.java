@@ -16,6 +16,11 @@ public class PoolHelper
 {
     public static final Logger log = Logger.getLogger(PoolHelper.class);
     private ConnectionPoolManager pool;
+    private boolean fail = true;
+
+    public void setFail(boolean fail) {
+        this.fail = fail;
+    }
 
     public PoolHelper(ConnectionPoolManager pool) {
         this.pool = pool;
@@ -27,7 +32,9 @@ public class PoolHelper
             conn = this.pool.getConnection();
         } catch (SQLException e) {
             log.error(e);
-            fail("Failed to get connection from pool. Exception: " + e.getMessage());
+            if (this.fail) {
+                fail("Failed to get connection from pool. Exception: " + e.getMessage());
+            }
         }
         return conn;
     }
@@ -37,7 +44,9 @@ public class PoolHelper
             this.pool.releaseConnection(conn);
         } catch (SQLException e) {
             log.error(e);
-            fail("Failed to release connection. Exception: " + e.getMessage());
+            if (this.fail) {
+                fail("Failed to release connection. Exception: " + e.getMessage());
+            }
         }
     }
 
@@ -46,7 +55,9 @@ public class PoolHelper
             this.pool.close();
         } catch (SQLException e) {
             log.error(e);
-            fail("Failed to close the connection pool. Exception: " + e.getMessage());
+            if (this.fail) {
+                fail("Failed to close the connection pool. Exception: " + e.getMessage());
+            }
         }
     }
 
@@ -55,11 +66,13 @@ public class PoolHelper
             conn.close();
         } catch (SQLException e) {
             log.error(e);
-            fail("Failed to close connection. Exception: " + e.getMessage());
+            if (this.fail) {
+                fail("Failed to close connection. Exception: " + e.getMessage());
+            }
         }
     }
 
-    public void sqlTest(Connection conn, String sql, boolean checkRowValues, boolean fail) throws SQLException {
+    public void sqlTest(Connection conn, String sql, boolean checkRowValues) throws SQLException {
         if (sql.length() == 0) {
             fail("Provide a test query property: TEST_QUERY in setup.properties file");
         }
@@ -72,7 +85,7 @@ public class PoolHelper
             res.close();
         } catch (SQLException e)  {
             log.error(e);
-            if (fail) {
+            if (this.fail) {
                 fail("Failed to execute query: " + sql + ". Exception: " + e.getMessage());
             } else {
                 throw e;

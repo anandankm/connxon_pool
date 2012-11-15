@@ -82,7 +82,7 @@ public class ConnectionPoolManagerTest
         log.info("Starting getConnectionTest()");
         Connection conn = this.poolHelper.getConnxFromPool();
         try {
-            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues, true);
+            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues);
         } catch (SQLException e) {
             // logging happens in PoolHelper.
         }
@@ -116,19 +116,14 @@ public class ConnectionPoolManagerTest
             assertTrue(e.getMessage().contains("Timed out. No available connection"));
             throw e;
         }
-        // Not reachable, since previous statement throws SQLException
-        if (conn != null) {
-            log.info("Connection not null");
-        }
-        if (conn.isClosed()) {
-            log.info("Connection closed");
-        }
         try {
-            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues, true);
+            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues);
         } catch (SQLException e) {
             // logging happens in PoolHelper.
         }
+        log.debug(this.poolManager.capacityInfo("Checking", "\n"));
         this.poolHelper.closeConnxon(conn);
+        log.info("Finished maxConnectionsTest()");
     }
 
     @Test (expected=SQLException.class)
@@ -146,8 +141,9 @@ public class ConnectionPoolManagerTest
         // this should log (in debug mode) "Does not belong to the pool"
         // and close the connection
         this.poolHelper.releaseConnxToPool(conn);
+        this.poolHelper.setFail(false);
         try {
-            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues, false);
+            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues);
         } catch (SQLException e) {
             assertTrue(e.getMessage().contains("No operations allowed after connection closed"));
             log.info("Finished releaseToPoolTest()");
@@ -159,7 +155,7 @@ public class ConnectionPoolManagerTest
     public void closeTest() throws SQLException {
         log.info("Starting closeTest()");
         Connection conn = this.poolHelper.getConnxFromPool();
-        this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues, true);
+        this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues);
         this.poolHelper.closeConnxon(conn);
         this.poolHelper.closePool();
         try {

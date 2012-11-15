@@ -31,9 +31,8 @@ public class ClientThread implements Runnable
         Connection conn = this.poolHelper.getConnxFromPool();
         try {
             int rSleep = this.randomRange(100,1000);
-            log.info("Sleeping for: " + rSleep);
             Thread.sleep(rSleep);
-            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues, true);
+            this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues);
         } catch (SQLException e) {
             log.error("Testing sql query failed", e);
         } catch (InterruptedException e) {
