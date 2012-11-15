@@ -176,6 +176,11 @@ public class ConnectionPoolManager implements ConnectionPool {
             log.warn("Maximum wait to throw an exception is set to less than 10. Setting it to default: " + PoolProperties.DEFAULT_MAX_WAIT);
             this.props.setMaxWait(PoolProperties.DEFAULT_MAX_WAIT);
         }
+        if (this.props.getMaxWait() < 3 * this.props.getReleaserInterval()) {
+            log.warn("Maximum wait to throw an exception is set to less than 3 * releaseInterval. Setting them to default");
+            this.props.setMaxWait(PoolProperties.DEFAULT_MAX_WAIT);
+            this.props.setReleaserInterval(PoolProperties.DEFAULT_RELEASER_INTERVAL);
+        }
     }
 
     /**
@@ -237,26 +242,42 @@ public class ConnectionPoolManager implements ConnectionPool {
         Connection conn = null;
         try {
             conn = this.availableConnections.poll(wait, TimeUnit.MILLISECONDS);
-            if (wait > 0) {
-                log.debug("Waited for: " + wait);
-                if (conn != null && conn.isClosed()) {
-                    log.debug("Connection is closed: " + conn);
-                }
-            }
         } catch (InterruptedException e) {
             throw new SQLException("Connection pool wait interrupted before " + wait + " milliseconds");
         }
+        boolean decrementIfNull = false;
         if (conn != null && conn.isClosed()) {
-            if (!this.reconnect(conn)) {
-                conn = null;
-            } else {
-                log.debug("Reconnected..");
+            decrementIfNull = true;
+            conn = this.reconnect(conn);
+            if (log.isDebugEnabled()) {
+                log.info("Reconnected: " + conn);
             }
         }
         if (!this.offerToBusy(conn)) {
-            return null;
+            conn = null;
+        } else {
+            if (log.isDebugEnabled()) {
+                log.debug(this.capacityInfo("Connection[" + conn + "] added to busy.", "\n"));
+            }
+        }
+        if (decrementIfNull && conn == null) {
+            this.size.decrementAndGet();
         }
         return conn;
+    }
+
+    private boolean offerToBusy(Connection conn) throws SQLException  {
+        if (conn == null || conn.isClosed()) {
+            return false;
+        }
+        if (!this.busyConnections.offer(conn)) {
+            if (log.isDebugEnabled()) {
+                log.debug("Capacity exceeded!!");
+            }
+            return false;
+        } else {
+            return true;
+        }
     }
 
     protected Connection createAndAdd() throws SQLException {
@@ -272,14 +293,19 @@ public class ConnectionPoolManager implements ConnectionPool {
         }
     }
 
-    protected boolean reconnect(Connection conn) throws SQLException {
+    protected Connection reconnect(Connection conn) throws SQLException {
         this.disconnect(conn);
+        conn = null;
         if (this.driver != null) {
             this.props.updateURLProperties(this.user, this.pass);
-            conn = this.driver.connect(this.url, this.props.getURLProperties());
-            return true;
+            try {
+                conn = this.driver.connect(this.url, this.props.getURLProperties());
+            } catch (SQLException e) {
+                log.error("Failed to reconnect", e);
+            }
+            return conn;
         }
-        return false;
+        return conn;
     }
 
     protected boolean disconnect(Connection conn) throws SQLException {
@@ -300,21 +326,6 @@ public class ConnectionPoolManager implements ConnectionPool {
         return DriverManager.getConnection(this.url, this.user, this.pass);
     }
 
-
-    private boolean offerToBusy(Connection conn) throws SQLException  {
-        if (conn == null || conn.isClosed()) {
-            return false;
-        }
-        if (!this.busyConnections.offer(conn)) {
-            if (log.isDebugEnabled()) {
-                log.debug("Capacity exceeded!!");
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -330,17 +341,21 @@ public class ConnectionPoolManager implements ConnectionPool {
         boolean closeConnection = true;
         if (this.busyConnections.remove(connection)) {
             // Connection belongs to the pool. Decrement pool size
-            this.size.decrementAndGet();
-            if (this.size.get() >= this.props.getMaxConnections()) {
+            if (this.size.get() > this.props.getMaxConnections()) {
                 if (log.isDebugEnabled()) {
                     log.debug(this.capacityInfo("Maximum connections size exceeded. Cannot release Connection[" + connection + "] to the pool. Closing it.", "\n"));
                 }
+                this.size.decrementAndGet();
             } else if (!this.availableConnections.offer(connection)) {
                 // Capacity exceeded?
                 if (log.isDebugEnabled()) {
                     log.debug(this.capacityInfo("Available connections size exceeded. Cannot release Connection[" + connection + "] to the pool. Closing it.", "\n"));
                 }
+                this.size.decrementAndGet();
             } else {
+                if (log.isDebugEnabled()) {
+                    log.debug(this.capacityInfo("Fine. Released Connection[" + connection + "] to the pool.", "\n"));
+                }
                 // everything went fine. Connection released to the pool.
                 closeConnection = false;
             }
@@ -447,6 +462,9 @@ public class ConnectionPoolManager implements ConnectionPool {
         }
     }
 
+    /**
+     * Life saver!! (Helped a lot in debugging test issues)
+     */
     public String capacityInfo(String prefix, String delimiter) {
         return prefix + delimiter +
             "\tCurrent Capacity: " + this.size.get() + "; Specified Capacity: " + this.props.getMaxConnections() + delimiter +
