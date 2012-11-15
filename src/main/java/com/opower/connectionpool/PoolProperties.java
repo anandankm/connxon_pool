@@ -14,7 +14,9 @@ public class PoolProperties implements PoolConfiguration {
     public static final String DEFAULT_DRIVERNAME = "com.mysql.jdbc.Driver";
     public static final int DEFAULT_MAX_CONNECTIONS = 20;
     public static final int DEFAULT_INITIAL_SIZE = 10;
-    public static final int DEFAULT_MAX_WAIT = 40000; // 40 seconds
+    public static final int DEFAULT_MAX_WAIT = 30000; // 30 seconds
+    public static final int DEFAULT_RELEASER_INTERVAL = 20000; // 20 seconds
+    public static final boolean DEFAULT_RUN_RELEASER = true;
 
 
     /**
@@ -26,6 +28,8 @@ public class PoolProperties implements PoolConfiguration {
     private volatile int maxConnections;
     private volatile int initialSize;
     private volatile int maxWait;
+    private volatile int releaserInterval;
+    private volatile boolean runReleaser;
     private Properties URLProperties;
 
     /**
@@ -122,6 +126,37 @@ public class PoolProperties implements PoolConfiguration {
      * {@inheritDoc}
      */
     @Override
+    public void setReleaserInterval(int releaserInterval) {
+        this.releaserInterval = releaserInterval;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getReleaserInterval() {
+        return this.releaserInterval;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void setRunReleaser(boolean runReleaser) {
+        this.runReleaser = runReleaser;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean getRunReleaser() {
+        return this.runReleaser;
+    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void setURLProperties(Properties properties) {
         this.URLProperties = properties;
     }
@@ -158,6 +193,8 @@ public class PoolProperties implements PoolConfiguration {
         this.maxConnections = DEFAULT_MAX_CONNECTIONS;
         this.initialSize = DEFAULT_INITIAL_SIZE;
         this.maxWait = DEFAULT_MAX_WAIT;
+        this.releaserInterval = DEFAULT_RELEASER_INTERVAL;
+        this.runReleaser = DEFAULT_RUN_RELEASER;
     }
 
     /**
@@ -165,13 +202,17 @@ public class PoolProperties implements PoolConfiguration {
      */
     @Override
     public void setUsingProperties(Properties props) {
-        this.driverName = props.getProperty("driverName", DEFAULT_DRIVERNAME);
+        this.driverName = props.getProperty("POOL_DRIVER_NAME", DEFAULT_DRIVERNAME);
         this.maxConnections = Integer.parseInt(
-                props.getProperty("maxConnections", "" + DEFAULT_MAX_CONNECTIONS));
+                props.getProperty("POOL_MAX_CONNECTIONS", "" + DEFAULT_MAX_CONNECTIONS));
         this.initialSize = Integer.parseInt(
-                props.getProperty("initialSize", "" + DEFAULT_INITIAL_SIZE));
+                props.getProperty("POOL_INITIAL_SIZE", "" + DEFAULT_INITIAL_SIZE));
         this.maxWait = Integer.parseInt(
-                props.getProperty("maxWait", "" + DEFAULT_MAX_WAIT));
+                props.getProperty("POOL_MAX_WAIT", "" + DEFAULT_MAX_WAIT));
+        this.releaserInterval = Integer.parseInt(
+                props.getProperty("POOL_RELEASER_INTERVAL", "" + DEFAULT_RELEASER_INTERVAL));
+        this.runReleaser = Boolean.parseBoolean(
+                props.getProperty("POOL_RUN_RELEASER", (DEFAULT_RUN_RELEASER?"true":"false")));
     }
 
 }

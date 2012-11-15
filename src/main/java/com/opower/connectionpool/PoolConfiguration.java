@@ -79,6 +79,28 @@ public interface PoolConfiguration {
     public int getMaxWait();
 
     /**
+     * Interval for the {@link ConnectionReleaser} to peek into
+     * busy connections, if they are closed or not.
+     */
+    public void setReleaserInterval(int releaserInterval);
+
+    /**
+     * Interval for the {@link ConnectionReleaser} to peek into
+     * busy connections, if they are closed or not.
+     */
+    public int getReleaserInterval();
+
+    /**
+     * Whether to run {@link ConnectionReleaser}
+     */
+    public void setRunReleaser(boolean runReleaser);
+
+    /**
+     * Whether to run {@link ConnectionReleaser}
+     */
+    public boolean getRunReleaser();
+
+    /**
      * {@link java.util.Properties} required by the {@link ConnectionPoolManager}
      * to reconnect using {@link java.sql.Driver}
      *
