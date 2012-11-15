@@ -33,7 +33,7 @@ Normally, clients can use the below methods:
 Another useful method in the framework is <code>capacityInfo(String prefix, String delimiter)</code>, which returns the pool capacity info
 with number of available connections, number of busy connections, current pool capacity and specified pool capacity, in a nice tab separated `String`.
 
-## [PoolProperties][Pool Properties]
+## [Pool Properties][Pool Properties]
 
 Connection Pool properties are specified in `src/main/resources/pool.properties`. These properties are specific to a single 
 `ConnectionPoolManager` instance. Currently the properties supported are (keys are the properties and the values are default values):
@@ -89,7 +89,7 @@ It contains the following properties (keys are the properties and the values are
 
 1. `TEST_DB` is database we need for testing our Connection Pool Scaffold.
 2. `TEST_TABLE` is the test table we are going to use.
-3. `TEST_DRIVER_NAME` is the driver as specified before in [PoolProperties][Pool Properties]
+3. `TEST_DRIVER_NAME` is the driver as specified before in [Pool Properties][Pool Properties]
      TEST_URL=jdbc:mysql://localhost:3306/opower_connxn?allowMultiQueries=true
      TEST_USER=root
      TEST_PASSWORD=pass
