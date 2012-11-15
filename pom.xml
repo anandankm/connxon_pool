@@ -7,6 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>OPOWER Connection Pool Homework</name>
     <dependencies>
+        <!-- mysql connector for testing -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -30,6 +31,7 @@
         </dependency>
     </dependencies>
     <build>
+         <!-- Copy the test resources over -->
         <testResources>
             <testResource>
                 <directory>${basedir}/src/test/resources</directory>
@@ -39,6 +41,7 @@
             </testResource>
         </testResources>
         <plugins>
+            <!-- Add surefire plugin to use log4j logging while testing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -49,6 +52,7 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+            <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -57,6 +61,7 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <!-- Auto clean the target everytime -->
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>2.5</version>

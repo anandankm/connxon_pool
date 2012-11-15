@@ -1,10 +1,37 @@
+/**
+ *                  GNU GENERAL PUBLIC LICENSE
+ *
+ *  Copyright (C) 2012 Anandan.
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 package com.opower.connectionpool;
 
 import java.util.Properties;
 import org.apache.log4j.Logger;
 
 /**
- * A {@link PoolConfiguration} implementation to configure {@link ConnectionPoolManager} properties
+ * A {@link PoolConfiguration} implementation to configure
+ * {@link ConnectionPoolManager} properties.
+ *
+ * These values can be configured from a properties file. Once the properties
+ * are loaded into {@link java.util.Properties}, this object can instantiated
+ * and passed on to a {@link ConnectionPoolManager}.
+ *
+ * @author andy.compeer@gmail.com
+ *
  */
 public class PoolProperties implements PoolConfiguration {
 
@@ -30,7 +57,7 @@ public class PoolProperties implements PoolConfiguration {
     private volatile int maxWait;
     private volatile int releaserInterval;
     private volatile boolean runReleaser;
-    private Properties URLProperties;
+    private volatile Properties URLProperties;
 
     /**
      * Constructor with default properties for the pool
@@ -161,10 +188,9 @@ public class PoolProperties implements PoolConfiguration {
         this.URLProperties = properties;
     }
 
+
     /**
-     * Update {@link #URLProperties} with user and password for reconnection
-     * @param user user to be set
-     * @param pass password to be set
+     * {@inheritDoc}
      */
     public void updateURLProperties(String user, String pass) {
         if (this.URLProperties != null) {

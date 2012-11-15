@@ -1,3 +1,22 @@
+/**
+ *                  GNU GENERAL PUBLIC LICENSE
+ *
+ *  Copyright (C) 2012 Anandan.
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 package com.opower.connectionpool;
 
 import java.sql.DriverManager;
@@ -41,6 +60,7 @@ public class ConnectionPoolManagerTest
         log.info("--------------------------");
         log.info("-  CONNECTION POOL TEST  -");
         log.info("--------------------------");
+        // get test properties from setup.properties file
         SetupHelper.getProperties();
         SetupHelper.dbSetup();
     }
@@ -101,7 +121,6 @@ public class ConnectionPoolManagerTest
         log.info("Finished propertiesTest()");
     }
 
-    //@Test (expected=SQLException.class)
     @Test
     public void maxConnectionsTest() throws SQLException {
         log.info("Starting maxConnectionsTest()");
@@ -113,15 +132,18 @@ public class ConnectionPoolManagerTest
         try {
             conn = this.poolManager.getConnection();
         } catch (SQLException e) {
+            // if runReleaser is false
             assertTrue(e.getMessage().contains("Timed out. No available connection"));
-            throw e;
+            log.debug(this.poolManager.capacityInfo("Checking", "\n"));
+            log.info("Finished maxConnectionsTest()");
+            return;
         }
         try {
             this.poolHelper.sqlTest(conn, SetupHelper.testQuery, SetupHelper.checkRowValues);
         } catch (SQLException e) {
+            throw e;
             // logging happens in PoolHelper.
         }
-        log.debug(this.poolManager.capacityInfo("Checking", "\n"));
         this.poolHelper.closeConnxon(conn);
         log.info("Finished maxConnectionsTest()");
     }
@@ -161,7 +183,7 @@ public class ConnectionPoolManagerTest
         try {
             conn = this.poolManager.getConnection();
         } catch (SQLException e) {
-            assertTrue(e.getMessage().contains("Connection pool closed"));
+            assertTrue(e.getMessage().contains("Connection pool is closed"));
             log.debug(this.poolManager.capacityInfo(e.getMessage(), "\n"));
             throw e;
         }

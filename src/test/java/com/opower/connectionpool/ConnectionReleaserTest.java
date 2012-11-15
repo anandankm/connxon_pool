@@ -1,3 +1,22 @@
+/**
+ *                  GNU GENERAL PUBLIC LICENSE
+ *
+ *  Copyright (C) 2012 Anandan.
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 package com.opower.connectionpool;
 
 import java.sql.DriverManager;
@@ -80,8 +99,9 @@ public class ConnectionReleaserTest
      */
     @Test
     public void testMultipleClients() {
-        log.info("Starting multiple clients test");
-        int numClients = 40;
+        // three times the maximum number of connections.
+        int numClients = 3 * this.poolProps.getMaxConnections();
+        log.info("Starting multiple clients test. Number of clients: " + numClients);
         LinkedList<Thread> clients = new LinkedList<Thread>();
         Random random = new Random();
         for (int i = 0; i < numClients; i++) {
