@@ -76,7 +76,6 @@ It contains the following properties (keys are the properties and the values are
      TEST_PASSWORD=pass
      TEST_QUERY=select * from opower_test
      TEST_CHECK_ROW_VALUES=true
-     TEST_DRIVER_NAME=com.mysql.jdbc.Driver
      TEST_DB_SETUP_URL=jdbc:mysql://localhost:3306?allowMultiQueries=true
      TEST_DB_SETUP_QUERY=DROP DATABASE IF EXISTS opower_connxn;\
                          CREATE DATABASE opower_connxn; USE opower_connxn;\
@@ -87,17 +86,32 @@ It contains the following properties (keys are the properties and the values are
                                  )ENGINE=InnoDB DEFAULT CHARSET=utf8;\
                          INSERT INTO opower_test VALUES (1, 'Anandan'), (2, 'Opower');
 
-1. `TEST_DB` is database we need for testing our Connection Pool Scaffold.
-2. `TEST_TABLE` is the test table we are going to use.
-3. `TEST_DRIVER_NAME` is the driver as specified before in [Pool Properties][Pool Properties]
-     TEST_URL=jdbc:mysql://localhost:3306/opower_connxn?allowMultiQueries=true
-     TEST_USER=root
-     TEST_PASSWORD=pass
-     TEST_QUERY=select * from opower_test
-     TEST_CHECK_ROW_VALUES=true
-     TEST_DRIVER_NAME=com.mysql.jdbc.Driver
-     TEST_DB_SETUP_URL=jdbc:mysql://localhost:3306?allowMultiQueries=true
-     TEST_DB_SETUP_QUERY=DROP DATABASE IF EXISTS opower_connxn;\
+
+1.  `TEST_DB` is database we need for testing our Connection Pool Scaffold.
+2.  `TEST_TABLE` is the test table we are going to use.
+3.  `TEST_DRIVER_NAME` is the driver as specified before in [Pool Properties][Pool Properties]
+4.  `TEST_URL` is the url needs to be used by the `java.sql.Driver`
+5.  `TEST_USER` is the user name to make a connection
+6.  `TEST_PASSWORD` is the password to make a connection
+7.  `TEST_QUERY` is the test query used by the test framework. If you are using your own query,
+    its better you set `TEST_CHECK_ROW_VALUES` to be false.
+8.  `TEST_CHECK_ROW_VALUES` is the boolean string that specifies to check each column and row values exactly
+    returned by the above `TEST_QUERY`
+10. `TEST_DB_SETUP_URL` could be same as `TEST_URL`, but if `TEST_DB_SETUP_QUERY` contains dropping and creating
+    databases, this could just be a string with host name.
+11. `TEST_DB_SETUP_QUERY` could be a database/table setup query, with `create table` and `insert table` DDL and DML
+
+Apart from this, [maven][maven] is used to test, compile and package.
+
+    mvn compile # compiles
+    mvn test-compile # compiles all Test*.java files in src/test/java directory
+    mvn test # runs tests on Test*.java files in src/test/java directory
+
+Test reports are stored in `target/surefire-reports` directory
+
+Contact me, if in need of any clarifications: andy.compeer@gmail.com
+
+
 # HOMEWORK INSTRUCTIONS
 
 This is a very basic scaffold project for you to work in for the connection pool homework assignment
