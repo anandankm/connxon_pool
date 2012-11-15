@@ -1,3 +1,428 @@
+00:17:28,141 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:17:28,143 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:17:28,143 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:17:28,149 INFO  [main,SetupHelper] Setting up DB
+00:17:28,537 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:17:28,673 INFO  [main,ConnectionPoolManager] Not running ConnectionReleaser
+00:17:28,673 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:17:28,676 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:17:28,679 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:17:28,782 INFO  [main,ConnectionPoolManager] Not running ConnectionReleaser
+00:17:28,783 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:17:28,783 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:17:28,784 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:17:28,870 INFO  [main,ConnectionPoolManager] Not running ConnectionReleaser
+00:17:28,871 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:17:58,938 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+00:17:58,940 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:17:59,029 INFO  [main,ConnectionPoolManager] Not running ConnectionReleaser
+00:17:59,029 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:17:59,039 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@5a676437] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:17:59,049 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:17:59,050 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:17:59,052 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:17:59,112 INFO  [main,ConnectionPoolManager] Not running ConnectionReleaser
+00:17:59,113 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:17:59,114 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:27:19,880 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:27:19,882 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:27:19,882 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:27:19,890 INFO  [main,SetupHelper] Setting up DB
+00:27:20,272 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:27:20,405 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:27:20,407 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:27:20,411 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:27:20,502 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:27:20,503 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:27:20,505 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:27:20,590 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:27:22,601 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:27:22,688 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:27:22,698 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@1e22ab57] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:27:22,706 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:27:22,706 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:27:22,707 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:27:22,759 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:27:22,760 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:32:34,376 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:32:34,378 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:32:34,378 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:32:34,385 INFO  [main,SetupHelper] Setting up DB
+00:32:34,770 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:32:34,894 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:32:34,897 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:32:34,900 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:32:35,014 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:32:35,015 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:32:35,017 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:32:35,104 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:32:37,111 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:32:37,198 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:32:37,208 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@6855a338] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:32:37,218 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:32:37,218 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:32:37,220 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:32:37,269 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:32:37,271 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:34:23,565 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:34:23,566 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:34:23,567 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:34:23,574 INFO  [main,SetupHelper] Setting up DB
+00:34:23,984 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:34:24,100 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:34:24,102 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:34:24,106 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:34:24,206 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:34:24,207 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:34:24,209 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:34:24,290 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:34:26,296 INFO  [main,ConnectionPoolManagerTest] Connection not null
+00:34:26,302 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:34:26,305 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:34:26,388 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:34:26,398 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@4911b910] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:34:26,398 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:34:26,399 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:34:26,401 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:34:26,456 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:34:26,458 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:37:05,059 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:37:05,061 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:37:05,062 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:37:05,068 INFO  [main,SetupHelper] Setting up DB
+00:37:05,470 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:37:05,600 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:37:05,602 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:37:05,604 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+00:37:05,606 DEBUG [main,ConnectionPoolManager] Releaser joined
+00:37:05,610 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:37:05,721 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:37:05,721 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:37:05,724 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:37:05,807 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:37:07,813 INFO  [main,ConnectionPoolManagerTest] Connection not null
+00:37:07,819 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:37:07,824 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:37:07,908 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:37:07,917 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@6e79839] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:37:07,917 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:37:07,918 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:37:07,920 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:37:07,976 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:37:07,977 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:40:10,032 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:40:10,034 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:40:10,035 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:40:10,041 INFO  [main,SetupHelper] Setting up DB
+00:40:10,424 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:40:10,563 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:40:10,565 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:40:10,569 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:40:10,665 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:40:10,665 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:40:10,668 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:40:10,752 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:40:12,753 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@42b307f0
+00:40:12,753 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@77ce3fc5
+00:40:12,753 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5bcdbf6
+00:40:12,753 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@320cf66b
+00:40:12,753 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@71060478
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@420f9c40
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@60491c4c
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5fe0f2f6
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@296f25a7
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@33e228bc
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@2f242b11
+00:40:12,754 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@9a68ef9
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@77d2b01b
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@356f144c
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@2b8bbc5a
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@c2f48d2
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@788ab708
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@426295eb
+00:40:12,755 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@16ba5c7a
+00:40:12,756 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@42b307f0
+00:40:12,758 INFO  [main,ConnectionPoolManagerTest] Connection not null
+00:40:12,759 INFO  [main,ConnectionPoolManagerTest] Connection closed
+00:40:12,764 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:40:12,769 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:40:12,857 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:40:12,865 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@6b687e7c] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:40:12,865 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:40:12,866 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:40:12,867 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:40:12,914 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:40:12,916 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:42:09,953 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:42:09,955 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:42:09,955 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:42:09,962 INFO  [main,SetupHelper] Setting up DB
+00:42:10,352 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:42:10,484 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:42:10,486 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:42:10,490 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:42:10,601 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:42:10,601 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:42:10,603 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:42:10,689 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:42:15,690 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@212bcd4b
+00:42:15,690 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@42b307f0
+00:42:15,690 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@77ce3fc5
+00:42:15,690 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5bcdbf6
+00:42:15,690 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@320cf66b
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@71060478
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@420f9c40
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@60491c4c
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5fe0f2f6
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@2565a3c2
+00:42:15,691 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5b976011
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@26858bf1
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7d95d4fe
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@15e232b5
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@38ee6681
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4f34b07e
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@789934d4
+00:42:15,692 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@360dc67e
+00:42:15,693 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@709446e4
+00:42:15,693 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@212bcd4b
+00:42:15,695 INFO  [main,ConnectionPoolManagerTest] Connection not null
+00:42:15,696 INFO  [main,ConnectionPoolManagerTest] Connection closed
+00:42:15,701 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:42:15,705 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:42:15,787 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:42:15,795 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@3c50507] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:42:15,796 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:42:15,796 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:42:15,797 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+00:42:15,798 DEBUG [main,ConnectionPoolManager] Releaser joined
+00:42:15,798 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:42:15,845 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:42:15,847 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:46:01,972 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:46:01,974 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:46:01,975 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:46:01,981 INFO  [main,SetupHelper] Setting up DB
+00:46:02,351 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:46:02,485 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+00:46:02,485 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:46:02,487 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:46:02,491 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:46:02,602 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:46:02,602 INFO  [Thread-2,ConnectionReleaser] Time between runs: 5000
+00:46:02,603 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:46:02,614 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:46:02,698 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:46:02,699 INFO  [Thread-3,ConnectionReleaser] Time between runs: 5000
+00:46:07,699 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+00:46:07,699 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@60491c4c
+00:46:07,699 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5fe0f2f6
+00:46:07,699 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@296f25a7
+00:46:07,699 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@40110c31
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@1f3785d3
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7632efa7
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@a13f991
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@2565a3c2
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@33e228bc
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@2f242b11
+00:46:07,700 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@9a68ef9
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@77d2b01b
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@356f144c
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@2b8bbc5a
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@c2f48d2
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@788ab708
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@426295eb
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@16ba5c7a
+00:46:07,701 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7c2e1f1f
+00:46:07,702 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+00:46:07,704 INFO  [main,ConnectionPoolManagerTest] Connection not null
+00:46:07,705 INFO  [main,ConnectionPoolManagerTest] Connection closed
+00:46:07,711 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:46:07,714 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:46:07,803 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:46:07,803 INFO  [Thread-4,ConnectionReleaser] Time between runs: 5000
+00:46:07,812 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@53cffeb4] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:46:07,813 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:46:07,813 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:46:07,815 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:46:07,878 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:46:07,878 INFO  [Thread-5,ConnectionReleaser] Time between runs: 5000
+00:46:07,881 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+00:49:28,090 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:49:28,092 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+00:49:28,092 INFO  [main,ConnectionPoolManagerTest] --------------------------
+00:49:28,099 INFO  [main,SetupHelper] Setting up DB
+00:49:28,484 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:49:28,603 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+00:49:28,603 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+00:49:28,606 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+00:49:28,609 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:49:28,715 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+00:49:28,715 INFO  [Thread-2,ConnectionReleaser] Time between runs: 5000
+00:49:28,716 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+00:49:28,718 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:49:28,800 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+00:49:28,800 INFO  [Thread-3,ConnectionReleaser] Time between runs: 5000
+00:49:33,801 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+00:49:33,806 INFO  [main,ConnectionPoolManagerTest] Connection not null
+00:49:33,807 INFO  [main,ConnectionPoolManagerTest] Connection closed
+00:49:33,812 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:49:33,815 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:49:33,901 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+00:49:33,901 INFO  [Thread-4,ConnectionReleaser] Time between runs: 5000
+00:49:33,910 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@a995a79] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+00:49:33,911 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+00:49:33,912 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+00:49:33,914 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+00:49:33,971 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+00:49:33,971 INFO  [Thread-5,ConnectionReleaser] Time between runs: 5000
+00:49:33,973 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+01:00:51,683 INFO  [main,ConnectionPoolManagerTest] --------------------------
+01:00:51,684 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+01:00:51,685 INFO  [main,ConnectionPoolManagerTest] --------------------------
+01:00:51,691 INFO  [main,SetupHelper] Setting up DB
+01:00:52,089 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:00:52,210 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+01:00:52,211 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+01:00:52,213 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+01:00:52,216 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:00:52,317 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+01:00:52,317 INFO  [Thread-2,ConnectionReleaser] Time between runs: 5000
+01:00:52,318 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+01:00:52,324 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:00:52,409 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+01:00:52,409 INFO  [Thread-3,ConnectionReleaser] Time between runs: 5000
+01:00:57,410 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@420f9c40
+01:00:57,410 DEBUG [main,ConnectionPoolManager] Waited for: 30000
+01:00:57,410 DEBUG [main,ConnectionPoolManager] Connection is closed: com.mysql.jdbc.JDBC4Connection@420f9c40
+01:00:57,416 INFO  [main,ConnectionPoolManagerTest] Connection not null
+01:00:57,417 INFO  [main,ConnectionPoolManagerTest] Connection closed
+01:00:57,422 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+01:00:57,425 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:00:57,507 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+01:00:57,507 INFO  [Thread-4,ConnectionReleaser] Time between runs: 5000
+01:00:57,516 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@a995a79] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+01:00:57,517 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+01:00:57,517 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+01:00:57,520 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:00:57,577 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+01:00:57,577 INFO  [Thread-5,ConnectionReleaser] Time between runs: 5000
+01:00:57,579 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+01:06:22,790 INFO  [main,ConnectionPoolManagerTest] --------------------------
+01:06:22,792 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+01:06:22,792 INFO  [main,ConnectionPoolManagerTest] --------------------------
+01:06:22,798 INFO  [main,SetupHelper] Setting up DB
+01:06:23,201 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:06:23,325 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+01:06:23,325 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+01:06:23,327 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+01:06:23,331 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:06:23,439 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+01:06:23,439 INFO  [Thread-2,ConnectionReleaser] Time between runs: 5000
+01:06:23,440 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+01:06:23,442 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:06:23,529 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+01:06:23,530 INFO  [Thread-3,ConnectionReleaser] Time between runs: 5000
+01:06:28,530 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+01:06:28,530 DEBUG [main,ConnectionPoolManager] Waited for: 30000
+01:06:28,530 DEBUG [main,ConnectionPoolManager] Connection is closed: com.mysql.jdbc.JDBC4Connection@edb4fa2
+01:06:28,531 DEBUG [main,ConnectionPoolManager] Reconnecting..
+01:06:28,536 INFO  [main,ConnectionPoolManagerTest] Connection not null
+01:06:28,537 INFO  [main,ConnectionPoolManagerTest] Connection closed
+01:06:28,543 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+01:06:28,546 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:06:28,631 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+01:06:28,631 INFO  [Thread-4,ConnectionReleaser] Time between runs: 5000
+01:06:28,640 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@53cffeb4] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+01:06:28,641 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+01:06:28,641 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+01:06:28,644 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:06:28,698 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+01:06:28,698 INFO  [Thread-5,ConnectionReleaser] Time between runs: 5000
+01:06:28,704 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+01:08:42,183 INFO  [main,ConnectionPoolManagerTest] --------------------------
+01:08:42,185 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+01:08:42,185 INFO  [main,ConnectionPoolManagerTest] --------------------------
+01:08:42,192 INFO  [main,SetupHelper] Setting up DB
+01:08:42,632 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:08:42,753 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+01:08:42,753 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+01:08:42,756 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+01:08:42,759 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:08:42,854 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+01:08:42,854 INFO  [Thread-2,ConnectionReleaser] Time between runs: 5000
+01:08:42,855 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+01:08:42,864 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:08:42,945 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+01:08:42,945 INFO  [Thread-3,ConnectionReleaser] Time between runs: 5000
+01:08:47,946 DEBUG [Thread-3,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@edb4fa2
+01:08:47,946 DEBUG [main,ConnectionPoolManager] Waited for: 30000
+01:08:47,946 DEBUG [main,ConnectionPoolManager] Connection is closed: com.mysql.jdbc.JDBC4Connection@edb4fa2
+01:08:47,952 DEBUG [main,ConnectionPoolManager] Reconnected..
+01:08:47,953 INFO  [main,ConnectionPoolManagerTest] Connection not null
+01:08:47,953 INFO  [main,ConnectionPoolManagerTest] Connection closed
+01:08:47,959 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+01:08:47,963 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:08:48,031 INFO  [Thread-4,ConnectionReleaser] Time between runs: 5000
+01:08:48,031 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+01:08:48,041 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@53cffeb4] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+01:08:48,042 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+01:08:48,042 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+01:08:48,045 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+01:08:48,105 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+01:08:48,105 INFO  [Thread-5,ConnectionReleaser] Time between runs: 5000
+01:08:48,107 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
 02:22:28,505 INFO  [main,ConnectionPoolManagerTest] --------------------------
 02:22:28,509 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
 02:22:28,510 INFO  [main,ConnectionPoolManagerTest] --------------------------
@@ -1415,3 +1840,1530 @@
 	Current Capacity: 20; Specified Capacity: 20
 	Available Connections: 3; Busy Connections: 17
 03:46:58,438 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+12:31:38,291 INFO  [main,ConnectionReleaserTest] -----------------------------------
+12:31:38,292 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+12:31:38,293 INFO  [main,ConnectionReleaserTest] -----------------------------------
+12:31:38,299 INFO  [main,SetupHelper] Setting up DB
+12:31:38,694 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+12:31:38,819 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+12:31:38,819 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 40
+12:31:38,820 INFO  [Client-0,ClientThread] Client started
+12:31:38,823 INFO  [Client-1,ClientThread] Client started
+12:31:38,823 INFO  [Client-2,ClientThread] Client started
+12:31:38,823 INFO  [Client-3,ClientThread] Client started
+12:31:38,824 INFO  [Client-4,ClientThread] Client started
+12:31:38,824 INFO  [Client-5,ClientThread] Client started
+12:31:38,824 INFO  [Client-6,ClientThread] Client started
+12:31:38,825 INFO  [Client-7,ClientThread] Client started
+12:31:38,825 INFO  [Client-8,ClientThread] Client started
+12:31:38,825 INFO  [Client-9,ClientThread] Client started
+12:31:38,825 INFO  [Client-10,ClientThread] Client started
+12:31:38,826 INFO  [Client-11,ClientThread] Client started
+12:31:38,828 INFO  [Client-12,ClientThread] Client started
+12:31:38,829 INFO  [Client-13,ClientThread] Client started
+12:31:38,831 INFO  [Client-14,ClientThread] Client started
+12:31:38,831 INFO  [Client-15,ClientThread] Client started
+12:31:38,836 INFO  [Client-16,ClientThread] Client started
+12:31:38,839 INFO  [Client-17,ClientThread] Client started
+12:31:38,853 INFO  [Client-19,ClientThread] Client started
+12:31:38,853 INFO  [Client-18,ClientThread] Client started
+12:31:38,854 INFO  [Client-20,ClientThread] Client started
+12:31:38,860 INFO  [Client-21,ClientThread] Client started
+12:31:38,861 INFO  [Client-23,ClientThread] Client started
+12:31:38,861 INFO  [Client-22,ClientThread] Client started
+12:31:38,864 INFO  [Client-24,ClientThread] Client started
+12:31:38,877 INFO  [Client-25,ClientThread] Client started
+12:31:38,881 INFO  [Client-26,ClientThread] Client started
+12:31:38,885 INFO  [Client-28,ClientThread] Client started
+12:31:38,888 INFO  [Client-29,ClientThread] Client started
+12:31:38,886 INFO  [Client-27,ClientThread] Client started
+12:31:38,897 INFO  [Client-31,ClientThread] Client started
+12:31:38,898 INFO  [Client-39,ClientThread] Client started
+12:31:38,898 INFO  [Client-38,ClientThread] Client started
+12:31:38,898 INFO  [Client-37,ClientThread] Client started
+12:31:38,898 INFO  [Client-36,ClientThread] Client started
+12:31:38,898 INFO  [Client-35,ClientThread] Client started
+12:31:38,898 INFO  [Client-34,ClientThread] Client started
+12:31:38,898 INFO  [Client-33,ClientThread] Client started
+12:31:38,898 INFO  [Client-32,ClientThread] Client started
+12:31:38,905 INFO  [Client-30,ClientThread] Client started
+12:31:38,985 INFO  [Client-17,ClientThread] Client finished
+12:31:39,072 INFO  [Client-14,ClientThread] Client finished
+12:31:39,093 INFO  [Client-7,ClientThread] Client finished
+12:31:39,096 INFO  [Client-8,ClientThread] Client finished
+12:31:39,174 INFO  [Client-4,ClientThread] Client finished
+12:31:39,205 INFO  [Client-6,ClientThread] Client finished
+12:31:39,217 INFO  [Client-2,ClientThread] Client finished
+12:31:39,220 INFO  [Client-12,ClientThread] Client finished
+12:31:39,271 INFO  [Client-19,ClientThread] Client finished
+12:31:39,283 INFO  [Client-9,ClientThread] Client finished
+12:31:39,294 INFO  [Client-0,ClientThread] Client finished
+12:31:39,422 INFO  [Client-5,ClientThread] Client finished
+12:31:39,463 INFO  [Client-1,ClientThread] Client finished
+12:31:39,511 INFO  [Client-11,ClientThread] Client finished
+12:31:39,717 INFO  [Client-15,ClientThread] Client finished
+12:31:39,746 INFO  [Client-18,ClientThread] Client finished
+12:31:39,755 INFO  [Client-10,ClientThread] Client finished
+12:31:39,775 INFO  [Client-16,ClientThread] Client finished
+12:31:39,808 INFO  [Client-3,ClientThread] Client finished
+12:31:39,833 INFO  [Client-13,ClientThread] Client finished
+12:31:43,986 INFO  [Client-39,ClientThread] Client finished
+12:31:44,031 INFO  [Client-23,ClientThread] Client finished
+12:31:44,064 INFO  [Client-28,ClientThread] Client finished
+12:31:44,093 INFO  [Client-35,ClientThread] Client finished
+12:31:44,097 INFO  [Client-31,ClientThread] Client finished
+12:31:44,206 INFO  [Client-20,ClientThread] Client finished
+12:31:44,280 INFO  [Client-38,ClientThread] Client finished
+12:31:44,496 INFO  [Client-26,ClientThread] Client finished
+12:31:44,511 INFO  [Client-24,ClientThread] Client finished
+12:31:44,558 INFO  [Client-29,ClientThread] Client finished
+12:31:44,591 INFO  [Client-36,ClientThread] Client finished
+12:31:44,622 INFO  [Client-37,ClientThread] Client finished
+12:31:44,701 INFO  [Client-27,ClientThread] Client finished
+12:31:49,096 INFO  [Client-22,ClientThread] Client finished
+12:31:49,116 INFO  [Client-32,ClientThread] Client finished
+12:31:49,201 INFO  [Client-33,ClientThread] Client finished
+12:31:49,489 INFO  [Client-34,ClientThread] Client finished
+12:31:49,562 INFO  [Client-30,ClientThread] Client finished
+12:31:49,685 INFO  [Client-21,ClientThread] Client finished
+12:31:49,701 INFO  [Client-25,ClientThread] Client finished
+12:31:49,701 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 17
+12:31:49,702 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+12:31:49,714 INFO  [main,ConnectionPoolManagerTest] --------------------------
+12:31:49,714 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+12:31:49,715 INFO  [main,ConnectionPoolManagerTest] --------------------------
+12:31:49,715 INFO  [main,SetupHelper] Setting up DB
+12:31:49,947 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+12:31:50,022 INFO  [Thread-42,ConnectionReleaser] Time between runs: 5000
+12:31:50,022 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+12:31:50,024 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+12:31:50,026 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+12:31:50,067 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+12:31:50,068 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+12:31:50,068 INFO  [Thread-43,ConnectionReleaser] Time between runs: 5000
+12:31:50,070 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+12:31:50,106 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+12:31:50,109 INFO  [Thread-44,ConnectionReleaser] Time between runs: 5000
+12:31:55,113 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+12:31:55,115 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+12:31:55,159 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+12:31:55,159 INFO  [Thread-45,ConnectionReleaser] Time between runs: 5000
+12:31:55,166 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+12:31:55,167 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+12:31:55,169 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+12:31:55,216 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+12:31:55,216 INFO  [Thread-46,ConnectionReleaser] Time between runs: 5000
+13:18:10,443 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:18:10,445 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+13:18:10,446 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:18:10,452 INFO  [main,SetupHelper] Setting up DB
+13:18:10,851 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+13:18:10,987 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+13:18:10,987 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 40
+13:18:10,989 INFO  [Client-0,ClientThread] Client started
+13:18:10,990 INFO  [Client-1,ClientThread] Client started
+13:18:10,990 INFO  [Client-2,ClientThread] Client started
+13:18:10,990 INFO  [Client-3,ClientThread] Client started
+13:18:10,991 INFO  [Client-4,ClientThread] Client started
+13:18:10,991 INFO  [Client-5,ClientThread] Client started
+13:18:10,991 INFO  [Client-6,ClientThread] Client started
+13:18:10,991 INFO  [Client-7,ClientThread] Client started
+13:18:10,992 INFO  [Client-8,ClientThread] Client started
+13:18:10,992 INFO  [Client-9,ClientThread] Client started
+13:18:10,992 INFO  [Client-10,ClientThread] Client started
+13:18:10,994 INFO  [Client-11,ClientThread] Client started
+13:18:10,996 INFO  [Client-12,ClientThread] Client started
+13:18:11,004 INFO  [Client-14,ClientThread] Client started
+13:18:11,006 INFO  [Client-13,ClientThread] Client started
+13:18:11,011 INFO  [Client-15,ClientThread] Client started
+13:18:11,011 INFO  [Client-16,ClientThread] Client started
+13:18:11,016 INFO  [Client-18,ClientThread] Client started
+13:18:11,018 INFO  [Client-17,ClientThread] Client started
+13:18:11,021 INFO  [Client-19,ClientThread] Client started
+13:18:11,023 INFO  [Client-20,ClientThread] Client started
+13:18:11,024 INFO  [Client-21,ClientThread] Client started
+13:18:11,025 INFO  [Client-22,ClientThread] Client started
+13:18:11,026 INFO  [Client-23,ClientThread] Client started
+13:18:11,043 INFO  [Client-24,ClientThread] Client started
+13:18:11,044 INFO  [Client-25,ClientThread] Client started
+13:18:11,044 INFO  [Client-26,ClientThread] Client started
+13:18:11,044 INFO  [Client-27,ClientThread] Client started
+13:18:11,045 INFO  [Client-28,ClientThread] Client started
+13:18:11,071 INFO  [Client-30,ClientThread] Client started
+13:18:11,072 INFO  [Client-36,ClientThread] Client started
+13:18:11,073 INFO  [Client-37,ClientThread] Client started
+13:18:11,072 INFO  [Client-31,ClientThread] Client started
+13:18:11,072 INFO  [Client-35,ClientThread] Client started
+13:18:11,073 INFO  [Client-39,ClientThread] Client started
+13:18:11,082 INFO  [Client-34,ClientThread] Client started
+13:18:11,071 INFO  [Client-33,ClientThread] Client started
+13:18:11,073 INFO  [Client-38,ClientThread] Client started
+13:18:11,072 INFO  [Client-29,ClientThread] Client started
+13:18:11,072 INFO  [Client-32,ClientThread] Client started
+13:18:11,107 INFO  [Client-6,ClientThread] Client finished
+13:18:11,154 INFO  [Client-7,ClientThread] Client finished
+13:18:11,185 INFO  [Client-13,ClientThread] Client finished
+13:18:11,226 INFO  [Client-4,ClientThread] Client finished
+13:18:11,337 INFO  [Client-11,ClientThread] Client finished
+13:18:11,433 INFO  [Client-0,ClientThread] Client finished
+13:18:11,500 INFO  [Client-15,ClientThread] Client finished
+13:18:11,556 INFO  [Client-14,ClientThread] Client finished
+13:18:11,764 INFO  [Client-21,ClientThread] Client finished
+13:18:11,771 INFO  [Client-8,ClientThread] Client finished
+13:18:11,806 INFO  [Client-10,ClientThread] Client finished
+13:18:11,810 INFO  [Client-2,ClientThread] Client finished
+13:18:11,813 INFO  [Client-20,ClientThread] Client finished
+13:18:11,813 INFO  [Client-9,ClientThread] Client finished
+13:18:11,828 INFO  [Client-3,ClientThread] Client finished
+13:18:11,833 INFO  [Client-5,ClientThread] Client finished
+13:18:11,864 INFO  [Client-12,ClientThread] Client finished
+13:18:11,887 INFO  [Client-1,ClientThread] Client finished
+13:18:11,982 INFO  [Client-18,ClientThread] Client finished
+13:18:11,991 INFO  [Client-16,ClientThread] Client finished
+13:18:16,140 INFO  [Client-17,ClientThread] Client finished
+13:18:16,194 INFO  [Client-22,ClientThread] Client finished
+13:18:16,301 INFO  [Client-27,ClientThread] Client finished
+13:18:16,307 INFO  [Client-23,ClientThread] Client finished
+13:18:16,334 INFO  [Client-19,ClientThread] Client finished
+13:18:16,407 INFO  [Client-28,ClientThread] Client finished
+13:18:16,556 INFO  [Client-37,ClientThread] Client finished
+13:18:16,558 INFO  [Client-30,ClientThread] Client finished
+13:18:16,585 INFO  [Client-24,ClientThread] Client finished
+13:18:16,710 INFO  [Client-25,ClientThread] Client finished
+13:18:16,713 INFO  [Client-26,ClientThread] Client finished
+13:18:16,779 INFO  [Client-36,ClientThread] Client finished
+13:18:16,790 INFO  [Client-31,ClientThread] Client finished
+13:18:21,137 INFO  [Client-29,ClientThread] Client finished
+13:18:21,180 INFO  [Client-35,ClientThread] Client finished
+13:18:21,268 INFO  [Client-38,ClientThread] Client finished
+13:18:21,404 INFO  [Client-34,ClientThread] Client finished
+13:18:21,492 INFO  [Client-39,ClientThread] Client finished
+13:18:21,676 INFO  [Client-32,ClientThread] Client finished
+13:18:21,712 INFO  [Client-33,ClientThread] Client finished
+13:18:21,713 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 17
+13:18:21,713 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+13:18:21,725 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:18:21,725 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+13:18:21,725 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:18:21,726 INFO  [main,SetupHelper] Setting up DB
+13:18:21,950 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:18:22,035 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+13:18:22,035 INFO  [Thread-42,ConnectionReleaser] Time between runs: 5000
+13:18:22,037 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+13:18:22,039 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:18:22,086 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+13:18:22,087 INFO  [Thread-43,ConnectionReleaser] Time between runs: 5000
+13:18:22,087 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+13:18:22,095 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:18:22,131 INFO  [Thread-44,ConnectionReleaser] Time between runs: 5000
+13:18:22,131 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+13:18:27,135 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+13:18:27,137 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:18:27,180 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+13:18:27,180 INFO  [Thread-45,ConnectionReleaser] Time between runs: 5000
+13:18:27,187 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+13:18:27,188 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+13:18:27,190 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:18:27,237 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+13:18:27,237 INFO  [Thread-46,ConnectionReleaser] Time between runs: 5000
+13:22:21,283 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:22:21,285 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+13:22:21,285 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:22:21,292 INFO  [main,SetupHelper] Setting up DB
+13:22:21,674 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+13:22:21,796 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+13:22:21,796 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 40
+13:22:21,798 INFO  [Client-0,ClientThread] Client started
+13:22:21,798 DEBUG [Client-0,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@114e3f41] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+13:22:21,799 INFO  [Client-1,ClientThread] Client started
+13:22:21,799 DEBUG [Client-1,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@779b04e2] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 8; Busy Connections: 2
+13:22:21,802 INFO  [Client-2,ClientThread] Client started
+13:22:21,802 DEBUG [Client-2,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@518bf072] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 3
+13:22:21,803 INFO  [Client-3,ClientThread] Client started
+13:22:21,803 DEBUG [Client-3,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@233d28e3] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 4
+13:22:21,803 INFO  [Client-4,ClientThread] Client started
+13:22:21,803 DEBUG [Client-4,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6b359c1b] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 5
+13:22:21,804 INFO  [Client-6,ClientThread] Client started
+13:22:21,804 DEBUG [Client-6,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4f8235ed] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 6
+13:22:21,804 INFO  [Client-5,ClientThread] Client started
+13:22:21,804 DEBUG [Client-5,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6da28362] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 7
+13:22:21,804 INFO  [Client-7,ClientThread] Client started
+13:22:21,805 DEBUG [Client-7,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6564dbd5] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 8
+13:22:21,805 INFO  [Client-9,ClientThread] Client started
+13:22:21,805 INFO  [Client-8,ClientThread] Client started
+13:22:21,805 INFO  [Client-12,ClientThread] Client started
+13:22:21,805 INFO  [Client-11,ClientThread] Client started
+13:22:21,805 INFO  [Client-10,ClientThread] Client started
+13:22:21,808 INFO  [Client-15,ClientThread] Client started
+13:22:21,807 INFO  [Client-13,ClientThread] Client started
+13:22:21,807 INFO  [Client-14,ClientThread] Client started
+13:22:21,807 DEBUG [Client-8,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@7426dbec] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 10
+13:22:21,818 INFO  [Client-17,ClientThread] Client started
+13:22:21,818 INFO  [Client-19,ClientThread] Client started
+13:22:21,807 DEBUG [Client-9,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@23309e87] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 10
+13:22:21,818 INFO  [Client-18,ClientThread] Client started
+13:22:21,825 INFO  [Client-16,ClientThread] Client started
+13:22:21,830 INFO  [Client-20,ClientThread] Client started
+13:22:21,833 INFO  [Client-21,ClientThread] Client started
+13:22:21,835 INFO  [Client-22,ClientThread] Client started
+13:22:21,838 INFO  [Client-23,ClientThread] Client started
+13:22:21,840 INFO  [Client-24,ClientThread] Client started
+13:22:21,849 INFO  [Client-25,ClientThread] Client started
+13:22:21,850 DEBUG [Client-15,ConnectionPoolManager] Capacity exceeded!!
+13:22:21,853 DEBUG [Client-13,ConnectionPoolManager] Capacity exceeded!!
+13:22:21,853 INFO  [Client-26,ClientThread] Client started
+13:22:21,857 DEBUG [Client-22,ConnectionPoolManager] Capacity exceeded!!
+13:22:21,862 DEBUG [Client-23,ConnectionPoolManager] Capacity exceeded!!
+13:22:21,863 INFO  [Client-27,ClientThread] Client started
+13:22:21,864 INFO  [Client-28,ClientThread] Client started
+13:22:21,864 DEBUG [Client-24,ConnectionPoolManager] Capacity exceeded!!
+13:22:21,876 INFO  [Client-29,ClientThread] Client started
+13:22:21,876 INFO  [Client-30,ClientThread] Client started
+13:22:21,879 INFO  [Client-31,ClientThread] Client started
+13:22:21,880 INFO  [Client-38,ClientThread] Client started
+13:22:21,879 INFO  [Client-37,ClientThread] Client started
+13:22:21,879 INFO  [Client-36,ClientThread] Client started
+13:22:21,879 INFO  [Client-35,ClientThread] Client started
+13:22:21,878 INFO  [Client-34,ClientThread] Client started
+13:22:21,877 INFO  [Client-33,ClientThread] Client started
+13:22:21,877 INFO  [Client-32,ClientThread] Client started
+13:22:21,881 INFO  [Client-39,ClientThread] Client started
+13:22:22,006 INFO  [Client-7,ClientThread] Client finished
+13:22:22,020 INFO  [Client-18,ClientThread] Client finished
+13:22:22,116 INFO  [Client-3,ClientThread] Client finished
+13:22:22,140 INFO  [Client-8,ClientThread] Client finished
+13:22:22,145 INFO  [Client-0,ClientThread] Client finished
+13:22:22,168 INFO  [Client-12,ClientThread] Client finished
+13:22:22,170 INFO  [Client-19,ClientThread] Client finished
+13:22:22,191 INFO  [Client-1,ClientThread] Client finished
+13:22:22,249 INFO  [Client-6,ClientThread] Client finished
+13:22:22,369 INFO  [Client-16,ClientThread] Client finished
+13:22:22,395 INFO  [Client-21,ClientThread] Client finished
+13:22:22,462 INFO  [Client-5,ClientThread] Client finished
+13:22:22,482 INFO  [Client-4,ClientThread] Client finished
+13:22:22,561 INFO  [Client-20,ClientThread] Client finished
+13:22:22,565 INFO  [Client-14,ClientThread] Client finished
+13:22:22,714 INFO  [Client-2,ClientThread] Client finished
+13:22:22,718 INFO  [Client-10,ClientThread] Client finished
+13:22:22,727 INFO  [Client-11,ClientThread] Client finished
+13:22:22,782 INFO  [Client-9,ClientThread] Client finished
+13:22:22,812 INFO  [Client-17,ClientThread] Client finished
+13:22:26,797 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@114e3f41] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+13:22:26,797 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@114e3f41
+13:22:26,799 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@779b04e2] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,799 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@779b04e2
+13:22:26,800 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@518bf072] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,800 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@518bf072
+13:22:26,800 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@233d28e3] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+13:22:26,801 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@233d28e3
+13:22:26,806 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6b359c1b] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+13:22:26,806 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6b359c1b
+13:22:26,806 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4f8235ed] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+13:22:26,810 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4f8235ed
+13:22:26,815 INFO  [Client-25,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@dcb52ae
+13:22:26,815 DEBUG [Client-25,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@dcb52ae] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+13:22:26,815 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6da28362] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+13:22:26,815 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6da28362
+13:22:26,819 INFO  [Client-23,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@48a77106
+13:22:26,819 DEBUG [Client-23,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@48a77106] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+13:22:26,819 INFO  [Client-26,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@68ed662d
+13:22:26,819 DEBUG [Client-26,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@68ed662d] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+13:22:26,819 INFO  [Client-15,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@371bed71
+13:22:26,819 DEBUG [Client-15,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@371bed71] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+13:22:26,819 INFO  [Client-13,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@580eac5a
+13:22:26,820 DEBUG [Client-13,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@580eac5a] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,821 INFO  [Client-27,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@6e79839
+13:22:26,821 DEBUG [Client-27,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6e79839] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,820 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6564dbd5] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+13:22:26,820 INFO  [Client-22,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@3f9f3736
+13:22:26,822 DEBUG [Client-22,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@3f9f3736] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+13:22:26,822 INFO  [Client-28,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@4911b910
+13:22:26,823 DEBUG [Client-28,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4911b910] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+13:22:26,823 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6564dbd5
+13:22:26,823 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7426dbec] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+13:22:26,825 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7426dbec
+13:22:26,827 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@23309e87] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,827 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@23309e87
+13:22:26,827 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@24148662] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,827 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@24148662
+13:22:26,834 INFO  [Client-24,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@14fdb00d
+13:22:26,835 DEBUG [Client-24,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@14fdb00d] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,836 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4b00ebec] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,836 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4b00ebec
+13:22:26,838 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@69267649] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+13:22:26,838 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@69267649
+13:22:26,843 INFO  [Client-38,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@49bdc9d8
+13:22:26,844 DEBUG [Client-38,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@49bdc9d8] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,841 INFO  [Client-30,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@3fb6101e
+13:22:26,840 INFO  [Client-29,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@7c65216
+13:22:26,844 DEBUG [Client-29,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@7c65216] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,844 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@426295eb] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,844 DEBUG [Client-30,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@3fb6101e] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,845 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@426295eb
+13:22:26,845 INFO  [Client-31,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@69d6065
+13:22:26,851 DEBUG [Client-31,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@69d6065] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,851 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@788ab708] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,851 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@788ab708
+13:22:26,854 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7f712b3a] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,854 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7f712b3a
+13:22:26,856 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@69e328e0] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+13:22:26,858 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@69e328e0
+13:22:26,861 INFO  [Client-34,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@6833f0de
+13:22:26,860 INFO  [Client-36,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@5f0ab09f
+13:22:26,858 INFO  [Client-37,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@4c349471
+13:22:26,862 DEBUG [Client-37,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4c349471] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+13:22:26,862 DEBUG [Client-36,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5f0ab09f] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:26,862 DEBUG [Client-34,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6833f0de] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:26,862 INFO  [Client-35,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@2a0ab444
+13:22:26,863 DEBUG [Client-35,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@2a0ab444] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+13:22:26,970 INFO  [Client-35,ClientThread] Client finished
+13:22:27,028 INFO  [Client-26,ClientThread] Client finished
+13:22:27,055 INFO  [Client-13,ClientThread] Client finished
+13:22:27,199 INFO  [Client-36,ClientThread] Client finished
+13:22:27,207 INFO  [Client-38,ClientThread] Client finished
+13:22:27,223 INFO  [Client-37,ClientThread] Client finished
+13:22:27,280 INFO  [Client-22,ClientThread] Client finished
+13:22:27,349 INFO  [Client-34,ClientThread] Client finished
+13:22:27,451 INFO  [Client-30,ClientThread] Client finished
+13:22:27,478 INFO  [Client-31,ClientThread] Client finished
+13:22:27,499 INFO  [Client-23,ClientThread] Client finished
+13:22:27,562 INFO  [Client-24,ClientThread] Client finished
+13:22:27,581 INFO  [Client-28,ClientThread] Client finished
+13:22:27,588 INFO  [Client-25,ClientThread] Client finished
+13:22:27,599 INFO  [Client-15,ClientThread] Client finished
+13:22:27,714 INFO  [Client-29,ClientThread] Client finished
+13:22:27,723 INFO  [Client-27,ClientThread] Client finished
+13:22:31,861 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@3f3f210f] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+13:22:31,861 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@3f3f210f
+13:22:31,861 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@37fd6bea] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+13:22:31,862 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@37fd6bea
+13:22:31,862 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7977b9b] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+13:22:31,862 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7977b9b
+13:22:31,862 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@dcb52ae] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 16
+13:22:31,862 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@dcb52ae
+13:22:31,862 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@48a77106] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 15
+13:22:31,862 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@48a77106
+13:22:31,863 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@68ed662d] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 14
+13:22:31,863 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@68ed662d
+13:22:31,863 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@371bed71] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 13
+13:22:31,863 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@371bed71
+13:22:31,863 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@580eac5a] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 12
+13:22:31,863 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@580eac5a
+13:22:31,863 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6e79839] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 11
+13:22:31,863 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6e79839
+13:22:31,864 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@3f9f3736] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 10
+13:22:31,864 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@3f9f3736
+13:22:31,868 INFO  [Client-39,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@205ddb6e
+13:22:31,868 INFO  [Client-32,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@71f1235b
+13:22:31,868 DEBUG [Client-32,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@71f1235b] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 12
+13:22:31,868 DEBUG [Client-39,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@205ddb6e] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 11
+13:22:31,877 INFO  [Client-33,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@3d93f6e2
+13:22:31,877 DEBUG [Client-33,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@3d93f6e2] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 13
+13:22:32,017 INFO  [Client-33,ClientThread] Client finished
+13:22:32,762 INFO  [Client-32,ClientThread] Client finished
+13:22:32,825 INFO  [Client-39,ClientThread] Client finished
+13:22:32,826 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 13
+13:22:32,826 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+13:22:32,826 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+13:22:32,827 DEBUG [main,ConnectionPoolManager] Releaser joined
+13:22:32,837 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:22:32,837 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+13:22:32,838 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:22:32,838 INFO  [main,SetupHelper] Setting up DB
+13:22:33,049 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:22:33,132 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+13:22:33,133 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@290fd7f6] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+13:22:33,132 INFO  [Thread-42,ConnectionReleaser] Time between runs: 5000
+13:22:33,134 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+13:22:33,134 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+13:22:33,135 DEBUG [main,ConnectionPoolManager] Releaser joined
+13:22:33,138 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:22:33,182 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+13:22:33,182 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@75bc16f0] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+13:22:33,182 INFO  [Thread-43,ConnectionReleaser] Time between runs: 5000
+13:22:33,193 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+13:22:33,193 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+13:22:33,193 DEBUG [main,ConnectionPoolManager] Releaser joined
+13:22:33,195 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:22:33,227 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+13:22:33,227 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@7b41fab6] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+13:22:33,228 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@28b301f2] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 8; Busy Connections: 2
+13:22:33,228 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@44cbbe] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 3
+13:22:33,228 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@249c2715] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 4
+13:22:33,229 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@7c9e67a] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 5
+13:22:33,229 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@583a5794] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 6
+13:22:33,229 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5e4be2cc] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 7
+13:22:33,230 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4816ef71] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 8
+13:22:33,230 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@59c208b0] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 9
+13:22:33,230 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@51c888d9] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 10
+13:22:33,232 INFO  [Thread-44,ConnectionReleaser] Time between runs: 5000
+13:22:38,233 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7b41fab6] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+13:22:38,233 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7b41fab6
+13:22:38,234 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@28b301f2] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 18
+13:22:38,234 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@28b301f2
+13:22:38,234 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@44cbbe] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 17
+13:22:38,234 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@44cbbe
+13:22:38,235 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@249c2715] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 16
+13:22:38,235 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@249c2715
+13:22:38,235 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7c9e67a] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 15
+13:22:38,235 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7c9e67a
+13:22:38,235 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@583a5794] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 14
+13:22:38,235 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@583a5794
+13:22:38,235 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@5e4be2cc] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 13
+13:22:38,235 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5e4be2cc
+13:22:38,235 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4816ef71] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 12
+13:22:38,236 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4816ef71
+13:22:38,236 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@59c208b0] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 8; Busy Connections: 11
+13:22:38,236 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@59c208b0
+13:22:38,236 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@51c888d9] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 10
+13:22:38,236 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@51c888d9
+13:22:38,236 INFO  [main,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@79884a40
+13:22:38,237 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@79884a40] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 11
+13:22:38,237 DEBUG [main,ConnectionPoolManagerTest] Checking
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 11
+13:22:38,237 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+13:22:38,238 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+13:22:38,238 DEBUG [main,ConnectionPoolManager] Releaser joined
+13:22:38,239 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:22:38,278 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+13:22:38,279 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@469a9b65] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+13:22:38,278 INFO  [Thread-45,ConnectionReleaser] Time between runs: 5000
+13:22:38,279 DEBUG [main,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@469a9b65] to the pool.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+13:22:38,283 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@10f102d3] will be closed
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+13:22:38,284 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+13:22:38,285 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+13:22:38,285 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+13:22:38,286 DEBUG [main,ConnectionPoolManager] Releaser joined
+13:22:38,288 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:22:38,332 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+13:22:38,332 INFO  [Thread-46,ConnectionReleaser] Time between runs: 5000
+13:22:38,332 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@d24111a] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+13:22:38,333 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+13:22:38,334 DEBUG [main,ConnectionPoolManager] Releaser joined
+13:25:03,075 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:25:03,076 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+13:25:03,077 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:25:03,083 INFO  [main,SetupHelper] Setting up DB
+13:25:03,473 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+13:25:03,593 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+13:25:03,593 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 40
+13:25:03,599 INFO  [Client-0,ClientThread] Client started
+13:25:03,600 INFO  [Client-1,ClientThread] Client started
+13:25:03,600 INFO  [Client-2,ClientThread] Client started
+13:25:03,600 INFO  [Client-3,ClientThread] Client started
+13:25:03,600 INFO  [Client-4,ClientThread] Client started
+13:25:03,601 INFO  [Client-5,ClientThread] Client started
+13:25:03,601 INFO  [Client-9,ClientThread] Client started
+13:25:03,601 INFO  [Client-8,ClientThread] Client started
+13:25:03,601 INFO  [Client-7,ClientThread] Client started
+13:25:03,601 INFO  [Client-6,ClientThread] Client started
+13:25:03,602 INFO  [Client-11,ClientThread] Client started
+13:25:03,602 INFO  [Client-14,ClientThread] Client started
+13:25:03,601 INFO  [Client-10,ClientThread] Client started
+13:25:03,602 INFO  [Client-13,ClientThread] Client started
+13:25:03,602 INFO  [Client-12,ClientThread] Client started
+13:25:03,609 INFO  [Client-16,ClientThread] Client started
+13:25:03,623 INFO  [Client-19,ClientThread] Client started
+13:25:03,623 INFO  [Client-20,ClientThread] Client started
+13:25:03,623 INFO  [Client-18,ClientThread] Client started
+13:25:03,623 INFO  [Client-17,ClientThread] Client started
+13:25:03,611 INFO  [Client-15,ClientThread] Client started
+13:25:03,635 INFO  [Client-21,ClientThread] Client started
+13:25:03,636 INFO  [Client-22,ClientThread] Client started
+13:25:03,643 INFO  [Client-23,ClientThread] Client started
+13:25:03,647 INFO  [Client-24,ClientThread] Client started
+13:25:03,663 INFO  [Client-25,ClientThread] Client started
+13:25:03,663 INFO  [Client-26,ClientThread] Client started
+13:25:03,674 INFO  [Client-28,ClientThread] Client started
+13:25:03,673 INFO  [Client-29,ClientThread] Client started
+13:25:03,673 INFO  [Client-27,ClientThread] Client started
+13:25:03,685 INFO  [Client-30,ClientThread] Client started
+13:25:03,685 INFO  [Client-31,ClientThread] Client started
+13:25:03,688 INFO  [Client-32,ClientThread] Client started
+13:25:03,688 INFO  [Client-35,ClientThread] Client started
+13:25:03,686 INFO  [Client-34,ClientThread] Client started
+13:25:03,689 INFO  [Client-37,ClientThread] Client started
+13:25:03,688 INFO  [Client-36,ClientThread] Client started
+13:25:03,689 INFO  [Client-33,ClientThread] Client started
+13:25:03,689 INFO  [Client-39,ClientThread] Client started
+13:25:03,689 INFO  [Client-38,ClientThread] Client started
+13:25:03,721 INFO  [Client-8,ClientThread] Client finished
+13:25:03,786 INFO  [Client-18,ClientThread] Client finished
+13:25:03,796 INFO  [Client-2,ClientThread] Client finished
+13:25:03,953 INFO  [Client-1,ClientThread] Client finished
+13:25:04,120 INFO  [Client-13,ClientThread] Client finished
+13:25:04,142 INFO  [Client-12,ClientThread] Client finished
+13:25:04,157 INFO  [Client-11,ClientThread] Client finished
+13:25:04,166 INFO  [Client-3,ClientThread] Client finished
+13:25:04,214 INFO  [Client-7,ClientThread] Client finished
+13:25:04,257 INFO  [Client-19,ClientThread] Client finished
+13:25:04,314 INFO  [Client-0,ClientThread] Client finished
+13:25:04,355 INFO  [Client-9,ClientThread] Client finished
+13:25:04,356 INFO  [Client-14,ClientThread] Client finished
+13:25:04,363 INFO  [Client-15,ClientThread] Client finished
+13:25:04,383 INFO  [Client-20,ClientThread] Client finished
+13:25:04,449 INFO  [Client-5,ClientThread] Client finished
+13:25:04,455 INFO  [Client-6,ClientThread] Client finished
+13:25:04,479 INFO  [Client-10,ClientThread] Client finished
+13:25:04,504 INFO  [Client-4,ClientThread] Client finished
+13:25:04,512 INFO  [Client-17,ClientThread] Client finished
+13:25:08,742 INFO  [Client-22,ClientThread] Client finished
+13:25:08,747 INFO  [Client-26,ClientThread] Client finished
+13:25:08,787 INFO  [Client-21,ClientThread] Client finished
+13:25:08,853 INFO  [Client-27,ClientThread] Client finished
+13:25:08,950 INFO  [Client-23,ClientThread] Client finished
+13:25:09,056 INFO  [Client-29,ClientThread] Client finished
+13:25:09,160 INFO  [Client-24,ClientThread] Client finished
+13:25:09,346 INFO  [Client-16,ClientThread] Client finished
+13:25:09,510 INFO  [Client-28,ClientThread] Client finished
+13:25:09,597 INFO  [Client-25,ClientThread] Client finished
+13:25:13,843 INFO  [Client-39,ClientThread] Client finished
+13:25:13,953 INFO  [Client-32,ClientThread] Client finished
+13:25:14,102 INFO  [Client-34,ClientThread] Client finished
+13:25:14,338 INFO  [Client-35,ClientThread] Client finished
+13:25:14,370 INFO  [Client-37,ClientThread] Client finished
+13:25:14,388 INFO  [Client-38,ClientThread] Client finished
+13:25:14,433 INFO  [Client-33,ClientThread] Client finished
+13:25:14,476 INFO  [Client-30,ClientThread] Client finished
+13:25:14,569 INFO  [Client-31,ClientThread] Client finished
+13:25:14,595 INFO  [Client-36,ClientThread] Client finished
+13:25:14,596 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 16
+13:25:14,596 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+13:25:14,607 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:25:14,607 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+13:25:14,607 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:25:14,608 INFO  [main,SetupHelper] Setting up DB
+13:25:14,827 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:25:14,910 INFO  [Thread-42,ConnectionReleaser] Time between runs: 5000
+13:25:14,910 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+13:25:14,911 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+13:25:14,914 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:25:14,960 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+13:25:14,961 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+13:25:14,961 INFO  [Thread-43,ConnectionReleaser] Time between runs: 5000
+13:25:14,963 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:25:14,999 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+13:25:14,999 INFO  [Thread-44,ConnectionReleaser] Time between runs: 5000
+13:25:20,003 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+13:25:20,005 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:25:20,041 INFO  [Thread-45,ConnectionReleaser] Time between runs: 5000
+13:25:20,041 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+13:25:20,046 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+13:25:20,047 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+13:25:20,048 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:25:20,087 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+13:25:20,087 INFO  [Thread-46,ConnectionReleaser] Time between runs: 5000
+13:25:20,092 ERROR [main,ConnectionPoolManagerTest] Error occurred
+java.sql.SQLException: Connection pool is closed
+	at com.opower.connectionpool.ConnectionPoolManager.getConnection(ConnectionPoolManager.java:270)
+	at com.opower.connectionpool.ConnectionPoolManagerTest.closeTest(ConnectionPoolManagerTest.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:21)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:104)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:147)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:101)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:139)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:82)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:81)
+13:28:04,361 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:28:04,363 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+13:28:04,364 INFO  [main,ConnectionReleaserTest] -----------------------------------
+13:28:04,370 INFO  [main,SetupHelper] Setting up DB
+13:28:04,762 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+13:28:04,895 INFO  [Thread-1,ConnectionReleaser] Time between runs: 5000
+13:28:04,895 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 40
+13:28:04,896 INFO  [Client-0,ClientThread] Client started
+13:28:04,897 INFO  [Client-1,ClientThread] Client started
+13:28:04,898 INFO  [Client-2,ClientThread] Client started
+13:28:04,898 INFO  [Client-3,ClientThread] Client started
+13:28:04,898 INFO  [Client-4,ClientThread] Client started
+13:28:04,898 INFO  [Client-5,ClientThread] Client started
+13:28:04,899 INFO  [Client-6,ClientThread] Client started
+13:28:04,899 INFO  [Client-7,ClientThread] Client started
+13:28:04,899 INFO  [Client-8,ClientThread] Client started
+13:28:04,899 INFO  [Client-9,ClientThread] Client started
+13:28:04,900 INFO  [Client-10,ClientThread] Client started
+13:28:04,902 INFO  [Client-11,ClientThread] Client started
+13:28:04,904 INFO  [Client-12,ClientThread] Client started
+13:28:04,914 INFO  [Client-15,ClientThread] Client started
+13:28:04,915 INFO  [Client-19,ClientThread] Client started
+13:28:04,915 INFO  [Client-18,ClientThread] Client started
+13:28:04,915 INFO  [Client-14,ClientThread] Client started
+13:28:04,914 INFO  [Client-17,ClientThread] Client started
+13:28:04,914 INFO  [Client-13,ClientThread] Client started
+13:28:04,914 INFO  [Client-16,ClientThread] Client started
+13:28:04,933 INFO  [Client-20,ClientThread] Client started
+13:28:04,944 INFO  [Client-21,ClientThread] Client started
+13:28:04,944 INFO  [Client-23,ClientThread] Client started
+13:28:04,944 INFO  [Client-22,ClientThread] Client started
+13:28:04,945 INFO  [Client-24,ClientThread] Client started
+13:28:04,946 INFO  [Client-25,ClientThread] Client started
+13:28:04,945 INFO  [Client-27,ClientThread] Client started
+13:28:04,945 INFO  [Client-26,ClientThread] Client started
+13:28:04,946 INFO  [Client-28,ClientThread] Client started
+13:28:04,946 INFO  [Client-29,ClientThread] Client started
+13:28:04,952 INFO  [Client-33,ClientThread] Client started
+13:28:04,953 INFO  [Client-32,ClientThread] Client started
+13:28:04,958 INFO  [Client-30,ClientThread] Client started
+13:28:04,958 INFO  [Client-35,ClientThread] Client started
+13:28:04,959 INFO  [Client-37,ClientThread] Client started
+13:28:04,959 INFO  [Client-36,ClientThread] Client started
+13:28:04,959 INFO  [Client-31,ClientThread] Client started
+13:28:04,959 INFO  [Client-34,ClientThread] Client started
+13:28:04,959 INFO  [Client-38,ClientThread] Client started
+13:28:04,959 INFO  [Client-39,ClientThread] Client started
+13:28:05,045 INFO  [Client-14,ClientThread] Client finished
+13:28:05,091 INFO  [Client-5,ClientThread] Client finished
+13:28:05,118 INFO  [Client-13,ClientThread] Client finished
+13:28:05,147 INFO  [Client-15,ClientThread] Client finished
+13:28:05,195 INFO  [Client-18,ClientThread] Client finished
+13:28:05,202 INFO  [Client-12,ClientThread] Client finished
+13:28:05,213 INFO  [Client-20,ClientThread] Client finished
+13:28:05,298 INFO  [Client-3,ClientThread] Client finished
+13:28:05,362 INFO  [Client-1,ClientThread] Client finished
+13:28:05,368 INFO  [Client-10,ClientThread] Client finished
+13:28:05,398 INFO  [Client-16,ClientThread] Client finished
+13:28:05,551 INFO  [Client-2,ClientThread] Client finished
+13:28:05,572 INFO  [Client-6,ClientThread] Client finished
+13:28:05,585 INFO  [Client-0,ClientThread] Client finished
+13:28:05,606 INFO  [Client-7,ClientThread] Client finished
+13:28:05,775 INFO  [Client-8,ClientThread] Client finished
+13:28:05,791 INFO  [Client-9,ClientThread] Client finished
+13:28:05,831 INFO  [Client-4,ClientThread] Client finished
+13:28:05,852 INFO  [Client-19,ClientThread] Client finished
+13:28:05,876 INFO  [Client-11,ClientThread] Client finished
+13:28:10,026 INFO  [Client-23,ClientThread] Client finished
+13:28:10,104 INFO  [Client-28,ClientThread] Client finished
+13:28:10,133 INFO  [Client-22,ClientThread] Client finished
+13:28:10,324 INFO  [Client-27,ClientThread] Client finished
+13:28:10,344 INFO  [Client-26,ClientThread] Client finished
+13:28:10,460 INFO  [Client-24,ClientThread] Client finished
+13:28:10,566 INFO  [Client-17,ClientThread] Client finished
+13:28:10,712 INFO  [Client-25,ClientThread] Client finished
+13:28:10,774 INFO  [Client-21,ClientThread] Client finished
+13:28:10,878 INFO  [Client-29,ClientThread] Client finished
+13:28:15,149 INFO  [Client-36,ClientThread] Client finished
+13:28:15,218 INFO  [Client-37,ClientThread] Client finished
+13:28:15,227 INFO  [Client-35,ClientThread] Client finished
+13:28:15,308 INFO  [Client-30,ClientThread] Client finished
+13:28:15,425 INFO  [Client-32,ClientThread] Client finished
+13:28:15,452 INFO  [Client-34,ClientThread] Client finished
+13:28:15,555 INFO  [Client-39,ClientThread] Client finished
+13:28:15,645 INFO  [Client-33,ClientThread] Client finished
+13:28:15,649 INFO  [Client-38,ClientThread] Client finished
+13:28:15,693 INFO  [Client-31,ClientThread] Client finished
+13:28:15,693 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+13:28:15,694 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+13:28:15,703 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:28:15,703 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+13:28:15,704 INFO  [main,ConnectionPoolManagerTest] --------------------------
+13:28:15,704 INFO  [main,SetupHelper] Setting up DB
+13:28:15,892 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:28:15,969 INFO  [Thread-42,ConnectionReleaser] Time between runs: 5000
+13:28:15,969 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+13:28:15,971 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+13:28:15,973 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:28:16,023 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+13:28:16,024 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+13:28:16,025 INFO  [Thread-43,ConnectionReleaser] Time between runs: 5000
+13:28:16,026 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:28:16,067 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+13:28:16,067 INFO  [Thread-44,ConnectionReleaser] Time between runs: 5000
+13:28:21,071 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+13:28:21,073 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:28:21,114 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+13:28:21,115 INFO  [Thread-45,ConnectionReleaser] Time between runs: 5000
+13:28:21,130 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+13:28:21,132 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+13:28:21,179 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+13:28:21,179 INFO  [Thread-46,ConnectionReleaser] Time between runs: 5000
+14:40:03,927 INFO  [main,ConnectionReleaserTest] -----------------------------------
+14:40:03,929 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+14:40:03,929 INFO  [main,ConnectionReleaserTest] -----------------------------------
+14:40:03,936 INFO  [main,SetupHelper] Setting up DB
+14:40:04,337 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+14:40:04,461 DEBUG [Thread-1,ConnectionReleaser] Time between runs: 5000
+14:40:04,461 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 40
+14:40:04,468 INFO  [Client-0,ClientThread] Client started
+14:40:04,469 DEBUG [Client-0,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@625dcec6] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+14:40:04,469 INFO  [Client-1,ClientThread] Client started
+14:40:04,469 DEBUG [Client-1,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@424ecfdd] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 8; Busy Connections: 2
+14:40:04,469 INFO  [Client-2,ClientThread] Client started
+14:40:04,470 DEBUG [Client-2,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4430d82d] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 3
+14:40:04,470 INFO  [Client-3,ClientThread] Client started
+14:40:04,470 DEBUG [Client-3,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@3a56f631] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 4
+14:40:04,470 INFO  [Client-4,ClientThread] Client started
+14:40:04,470 DEBUG [Client-4,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@233d28e3] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 5
+14:40:04,471 INFO  [Client-5,ClientThread] Client started
+14:40:04,471 DEBUG [Client-5,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6b359c1b] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 6
+14:40:04,471 INFO  [Client-6,ClientThread] Client started
+14:40:04,471 DEBUG [Client-6,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@c9be79a] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 7
+14:40:04,471 INFO  [Client-7,ClientThread] Client started
+14:40:04,472 DEBUG [Client-7,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@485fcf29] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 8
+14:40:04,472 INFO  [Client-8,ClientThread] Client started
+14:40:04,472 DEBUG [Client-8,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@a19b1de] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 9
+14:40:04,476 INFO  [Client-9,ClientThread] Client started
+14:40:04,476 INFO  [Client-10,ClientThread] Client started
+14:40:04,476 DEBUG [Client-10,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6f25844f] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 10
+14:40:04,476 INFO  [Client-11,ClientThread] Client started
+14:40:04,477 INFO  [Client-14,ClientThread] Client started
+14:40:04,477 INFO  [Client-13,ClientThread] Client started
+14:40:04,476 INFO  [Client-12,ClientThread] Client started
+14:40:04,481 INFO  [Client-15,ClientThread] Client started
+14:40:04,489 INFO  [Client-18,ClientThread] Client started
+14:40:04,492 INFO  [Client-19,ClientThread] Client started
+14:40:04,493 INFO  [Client-16,ClientThread] Client started
+14:40:04,494 INFO  [Client-20,ClientThread] Client started
+14:40:04,495 INFO  [Client-17,ClientThread] Client started
+14:40:04,500 INFO  [Client-21,ClientThread] Client started
+14:40:04,503 INFO  [Client-22,ClientThread] Client started
+14:40:04,509 INFO  [Client-23,ClientThread] Client started
+14:40:04,510 INFO  [Client-24,ClientThread] Client started
+14:40:04,510 INFO  [Client-25,ClientThread] Client started
+14:40:04,511 INFO  [Client-26,ClientThread] Client started
+14:40:04,511 INFO  [Client-27,ClientThread] Client started
+14:40:04,511 INFO  [Client-28,ClientThread] Client started
+14:40:04,521 INFO  [Client-32,ClientThread] Client started
+14:40:04,522 INFO  [Client-30,ClientThread] Client started
+14:40:04,522 INFO  [Client-31,ClientThread] Client started
+14:40:04,521 INFO  [Client-29,ClientThread] Client started
+14:40:04,522 INFO  [Client-36,ClientThread] Client started
+14:40:04,522 INFO  [Client-39,ClientThread] Client started
+14:40:04,523 INFO  [Client-35,ClientThread] Client started
+14:40:04,524 INFO  [Client-34,ClientThread] Client started
+14:40:04,521 INFO  [Client-33,ClientThread] Client started
+14:40:04,524 DEBUG [Client-21,ConnectionPoolManager] Capacity exceeded!!
+14:40:04,522 INFO  [Client-37,ClientThread] Client started
+14:40:04,526 DEBUG [Client-22,ConnectionPoolManager] Capacity exceeded!!
+14:40:04,530 INFO  [Client-38,ClientThread] Client started
+14:40:04,542 DEBUG [Client-17,ConnectionPoolManager] Capacity exceeded!!
+14:40:04,728 INFO  [Client-12,ClientThread] Client finished
+14:40:04,747 INFO  [Client-6,ClientThread] Client finished
+14:40:04,775 INFO  [Client-0,ClientThread] Client finished
+14:40:04,814 INFO  [Client-5,ClientThread] Client finished
+14:40:04,817 INFO  [Client-13,ClientThread] Client finished
+14:40:04,949 INFO  [Client-11,ClientThread] Client finished
+14:40:04,982 INFO  [Client-4,ClientThread] Client finished
+14:40:05,018 INFO  [Client-2,ClientThread] Client finished
+14:40:05,094 INFO  [Client-7,ClientThread] Client finished
+14:40:05,099 INFO  [Client-18,ClientThread] Client finished
+14:40:05,117 INFO  [Client-20,ClientThread] Client finished
+14:40:05,153 INFO  [Client-3,ClientThread] Client finished
+14:40:05,331 INFO  [Client-9,ClientThread] Client finished
+14:40:05,350 INFO  [Client-1,ClientThread] Client finished
+14:40:05,394 INFO  [Client-8,ClientThread] Client finished
+14:40:05,401 INFO  [Client-14,ClientThread] Client finished
+14:40:05,419 INFO  [Client-15,ClientThread] Client finished
+14:40:05,434 INFO  [Client-16,ClientThread] Client finished
+14:40:05,444 INFO  [Client-10,ClientThread] Client finished
+14:40:05,456 INFO  [Client-19,ClientThread] Client finished
+14:40:09,462 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@625dcec6] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+14:40:09,462 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@625dcec6
+14:40:09,462 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@424ecfdd] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+14:40:09,462 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@424ecfdd
+14:40:09,463 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4430d82d] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:09,465 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4430d82d
+14:40:09,466 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@3a56f631] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:09,466 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@3a56f631
+14:40:09,467 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@233d28e3] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+14:40:09,467 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@233d28e3
+14:40:09,467 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6b359c1b] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+14:40:09,467 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6b359c1b
+14:40:09,476 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@c9be79a] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 13
+14:40:09,476 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@c9be79a
+14:40:09,474 INFO  [Client-28,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@4f4db0e3
+14:40:09,479 DEBUG [Client-28,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4f4db0e3] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 13
+14:40:09,473 INFO  [Client-25,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@45d6a56e
+14:40:09,485 DEBUG [Client-25,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@45d6a56e] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+14:40:09,485 INFO  [Client-26,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@39cf4a2c
+14:40:09,485 DEBUG [Client-26,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@39cf4a2c] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+14:40:09,472 INFO  [Client-24,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@5812f9ee
+14:40:09,479 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@485fcf29] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 12
+14:40:09,485 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@485fcf29
+14:40:09,479 INFO  [Client-23,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@5749b290
+14:40:09,486 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@a19b1de] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+14:40:09,486 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@a19b1de
+14:40:09,485 DEBUG [Client-24,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5812f9ee] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:09,486 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6f25844f] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+14:40:09,487 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6f25844f
+14:40:09,486 DEBUG [Client-23,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5749b290] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:09,490 INFO  [Client-32,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@5a02c35e
+14:40:09,490 DEBUG [Client-32,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5a02c35e] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+14:40:09,494 INFO  [Client-31,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@1b31303f
+14:40:09,494 DEBUG [Client-31,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@1b31303f] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:09,494 INFO  [Client-36,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@67a5a19
+14:40:09,495 DEBUG [Client-36,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@67a5a19] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:09,487 INFO  [Client-27,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@4ebac9b9
+14:40:09,487 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@236acdd1] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 14
+14:40:09,495 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@236acdd1
+14:40:09,495 DEBUG [Client-27,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4ebac9b9] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+14:40:09,496 INFO  [Client-29,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@1a50ca0c
+14:40:09,495 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7c2e1f1f] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:09,496 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7c2e1f1f
+14:40:09,497 INFO  [Client-30,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@2e00e753
+14:40:09,498 DEBUG [Client-30,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@2e00e753] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+14:40:09,496 DEBUG [Client-29,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@1a50ca0c] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+14:40:09,497 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@c2f48d2] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:09,499 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@c2f48d2
+14:40:09,500 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7054c4ad] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:09,500 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7054c4ad
+14:40:09,501 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@10d09ad3] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:09,501 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@10d09ad3
+14:40:09,506 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4737371] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 15
+14:40:09,506 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4737371
+14:40:09,508 INFO  [Client-35,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@17094d48
+14:40:09,511 DEBUG [Client-35,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@17094d48] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:09,512 INFO  [Client-21,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@ffdadcd
+14:40:09,512 INFO  [Client-39,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@579d75ee
+14:40:09,512 DEBUG [Client-39,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@579d75ee] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+14:40:09,513 INFO  [Client-37,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@5f0ab09f
+14:40:09,514 DEBUG [Client-37,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5f0ab09f] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+14:40:09,512 DEBUG [Client-21,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@ffdadcd] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:09,512 INFO  [Client-34,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@22a98932
+14:40:09,521 DEBUG [Client-34,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@22a98932] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+14:40:09,613 INFO  [Client-24,ClientThread] Client finished
+14:40:09,639 INFO  [Client-21,ClientThread] Client finished
+14:40:09,737 INFO  [Client-36,ClientThread] Client finished
+14:40:09,754 INFO  [Client-29,ClientThread] Client finished
+14:40:09,772 INFO  [Client-34,ClientThread] Client finished
+14:40:09,857 INFO  [Client-32,ClientThread] Client finished
+14:40:09,873 INFO  [Client-27,ClientThread] Client finished
+14:40:09,931 INFO  [Client-28,ClientThread] Client finished
+14:40:09,962 INFO  [Client-30,ClientThread] Client finished
+14:40:09,983 INFO  [Client-23,ClientThread] Client finished
+14:40:10,024 INFO  [Client-31,ClientThread] Client finished
+14:40:10,177 INFO  [Client-26,ClientThread] Client finished
+14:40:10,218 INFO  [Client-35,ClientThread] Client finished
+14:40:10,218 INFO  [Client-25,ClientThread] Client finished
+14:40:10,470 INFO  [Client-37,ClientThread] Client finished
+14:40:10,471 INFO  [Client-39,ClientThread] Client finished
+14:40:14,507 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7cfefe3f] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+14:40:14,507 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7cfefe3f
+14:40:14,507 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@426295eb] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 18
+14:40:14,508 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@426295eb
+14:40:14,509 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@69267649] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 17
+14:40:14,509 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@69267649
+14:40:14,510 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@709446e4] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 16
+14:40:14,510 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@709446e4
+14:40:14,510 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4f4db0e3] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 15
+14:40:14,511 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4f4db0e3
+14:40:14,511 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@45d6a56e] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 14
+14:40:14,511 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@45d6a56e
+14:40:14,511 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@39cf4a2c] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 13
+14:40:14,511 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@39cf4a2c
+14:40:14,511 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@5812f9ee] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 12
+14:40:14,511 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5812f9ee
+14:40:14,511 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@5749b290] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 11
+14:40:14,512 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5749b290
+14:40:14,512 DEBUG [Thread-1,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@5a02c35e] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 10
+14:40:14,512 DEBUG [Thread-1,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5a02c35e
+14:40:14,514 INFO  [Client-33,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@4b142196
+14:40:14,514 DEBUG [Client-33,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4b142196] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 11
+14:40:14,516 INFO  [Client-17,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@205ddb6e
+14:40:14,516 DEBUG [Client-17,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@205ddb6e] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 12
+14:40:14,518 INFO  [Client-38,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@50d17ec3
+14:40:14,518 DEBUG [Client-38,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@50d17ec3] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 13
+14:40:14,519 INFO  [Client-22,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@3d358f03
+14:40:14,519 DEBUG [Client-22,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@3d358f03] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 14
+14:40:14,796 INFO  [Client-17,ClientThread] Client finished
+14:40:15,160 INFO  [Client-22,ClientThread] Client finished
+14:40:15,197 INFO  [Client-33,ClientThread] Client finished
+14:40:15,361 INFO  [Client-38,ClientThread] Client finished
+14:40:15,362 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 14
+14:40:15,362 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+14:40:15,362 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+14:40:15,363 DEBUG [main,ConnectionPoolManager] Releaser joined
+14:40:15,377 INFO  [main,ConnectionPoolManagerTest] --------------------------
+14:40:15,377 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+14:40:15,377 INFO  [main,ConnectionPoolManagerTest] --------------------------
+14:40:15,378 INFO  [main,SetupHelper] Setting up DB
+14:40:15,588 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:40:15,670 DEBUG [Thread-42,ConnectionReleaser] Time between runs: 5000
+14:40:15,670 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+14:40:15,673 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@290fd7f6] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+14:40:15,674 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+14:40:15,674 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+14:40:15,675 DEBUG [main,ConnectionPoolManager] Releaser joined
+14:40:15,677 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:40:15,723 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+14:40:15,724 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@2092dcdb] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+14:40:15,725 DEBUG [Thread-43,ConnectionReleaser] Time between runs: 5000
+14:40:15,733 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+14:40:15,733 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+14:40:15,733 DEBUG [main,ConnectionPoolManager] Releaser joined
+14:40:15,735 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:40:15,771 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+14:40:15,772 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@7c9e67a] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+14:40:15,772 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@583a5794] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 8; Busy Connections: 2
+14:40:15,771 DEBUG [Thread-44,ConnectionReleaser] Time between runs: 5000
+14:40:15,783 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@5e4be2cc] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 3
+14:40:15,783 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@4816ef71] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 4
+14:40:15,783 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@59c208b0] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 5
+14:40:15,784 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@51c888d9] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 6
+14:40:15,784 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@44908881] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 7
+14:40:15,784 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@6cf1f051] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 8
+14:40:15,785 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@7fd88db7] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 9
+14:40:15,785 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@62402af3] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 10
+14:40:20,772 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7c9e67a] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 19
+14:40:20,772 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7c9e67a
+14:40:20,773 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@583a5794] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 1; Busy Connections: 18
+14:40:20,773 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@583a5794
+14:40:20,773 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@5e4be2cc] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 2; Busy Connections: 17
+14:40:20,774 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@5e4be2cc
+14:40:20,774 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@4816ef71] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 3; Busy Connections: 16
+14:40:20,774 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@4816ef71
+14:40:20,774 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@59c208b0] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 4; Busy Connections: 15
+14:40:20,774 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@59c208b0
+14:40:20,774 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@51c888d9] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 5; Busy Connections: 14
+14:40:20,774 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@51c888d9
+14:40:20,774 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@44908881] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 6; Busy Connections: 13
+14:40:20,774 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@44908881
+14:40:20,775 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@6cf1f051] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 12
+14:40:20,775 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@6cf1f051
+14:40:20,775 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@7fd88db7] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 8; Busy Connections: 11
+14:40:20,775 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@7fd88db7
+14:40:20,775 DEBUG [Thread-44,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@62402af3] to the pool.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 10
+14:40:20,775 DEBUG [Thread-44,ConnectionReleaser] Connection Released by ConnectionReleaser: com.mysql.jdbc.JDBC4Connection@62402af3
+14:40:20,776 INFO  [main,ConnectionPoolManager] Reconnected: com.mysql.jdbc.JDBC4Connection@79884a40
+14:40:20,776 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@79884a40] added to busy.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 11
+14:40:20,777 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+14:40:20,777 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+14:40:20,777 DEBUG [main,ConnectionPoolManager] Releaser joined
+14:40:20,779 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:40:20,810 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+14:40:20,810 DEBUG [Thread-45,ConnectionReleaser] Time between runs: 5000
+14:40:20,811 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@469a9b65] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+14:40:20,811 DEBUG [main,ConnectionPoolManager] Fine. Released Connection[com.mysql.jdbc.JDBC4Connection@469a9b65] to the pool.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+14:40:20,815 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@10f102d3] will be closed
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+14:40:20,824 DEBUG [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+14:40:20,825 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+14:40:20,825 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+14:40:20,826 DEBUG [main,ConnectionPoolManager] Releaser joined
+14:40:20,827 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:40:20,882 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+14:40:20,882 DEBUG [Thread-46,ConnectionReleaser] Time between runs: 5000
+14:40:20,882 DEBUG [main,ConnectionPoolManager] Connection[com.mysql.jdbc.JDBC4Connection@1b45e2d5] added to busy.
+	Current Capacity: 10; Specified Capacity: 20
+	Available Connections: 9; Busy Connections: 1
+14:40:20,884 DEBUG [main,ConnectionPoolManager] Waiting for Releaser to join
+14:40:20,884 DEBUG [main,ConnectionPoolManager] Releaser joined
+14:40:20,885 DEBUG [main,ConnectionPoolManagerTest] Connection pool is closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+14:46:32,937 INFO  [main,ConnectionReleaserTest] -----------------------------------
+14:46:32,939 INFO  [main,ConnectionReleaserTest] -       POOL RELEASER TEST        -
+14:46:32,939 INFO  [main,ConnectionReleaserTest] -----------------------------------
+14:46:32,945 INFO  [main,SetupHelper] Setting up DB
+14:46:33,333 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+14:46:33,453 INFO  [main,ConnectionReleaserTest] Starting multiple clients test. Number of clients: 60
+14:46:33,455 INFO  [Client-0,ClientThread] Client started
+14:46:33,460 INFO  [Client-1,ClientThread] Client started
+14:46:33,460 INFO  [Client-2,ClientThread] Client started
+14:46:33,461 INFO  [Client-16,ClientThread] Client started
+14:46:33,461 INFO  [Client-17,ClientThread] Client started
+14:46:33,461 INFO  [Client-15,ClientThread] Client started
+14:46:33,461 INFO  [Client-14,ClientThread] Client started
+14:46:33,461 INFO  [Client-13,ClientThread] Client started
+14:46:33,461 INFO  [Client-12,ClientThread] Client started
+14:46:33,461 INFO  [Client-11,ClientThread] Client started
+14:46:33,461 INFO  [Client-10,ClientThread] Client started
+14:46:33,461 INFO  [Client-9,ClientThread] Client started
+14:46:33,461 INFO  [Client-8,ClientThread] Client started
+14:46:33,461 INFO  [Client-7,ClientThread] Client started
+14:46:33,461 INFO  [Client-6,ClientThread] Client started
+14:46:33,461 INFO  [Client-5,ClientThread] Client started
+14:46:33,461 INFO  [Client-4,ClientThread] Client started
+14:46:33,461 INFO  [Client-3,ClientThread] Client started
+14:46:33,473 INFO  [Client-28,ClientThread] Client started
+14:46:33,475 INFO  [Client-29,ClientThread] Client started
+14:46:33,462 INFO  [Client-27,ClientThread] Client started
+14:46:33,462 INFO  [Client-26,ClientThread] Client started
+14:46:33,462 INFO  [Client-25,ClientThread] Client started
+14:46:33,462 INFO  [Client-24,ClientThread] Client started
+14:46:33,462 INFO  [Client-23,ClientThread] Client started
+14:46:33,462 INFO  [Client-22,ClientThread] Client started
+14:46:33,462 INFO  [Client-21,ClientThread] Client started
+14:46:33,462 INFO  [Client-20,ClientThread] Client started
+14:46:33,462 INFO  [Client-19,ClientThread] Client started
+14:46:33,462 INFO  [Client-18,ClientThread] Client started
+14:46:33,494 INFO  [Client-30,ClientThread] Client started
+14:46:33,514 INFO  [Client-32,ClientThread] Client started
+14:46:33,516 INFO  [Client-33,ClientThread] Client started
+14:46:33,517 INFO  [Client-34,ClientThread] Client started
+14:46:33,517 INFO  [Client-35,ClientThread] Client started
+14:46:33,519 INFO  [Client-36,ClientThread] Client started
+14:46:33,522 INFO  [Client-37,ClientThread] Client started
+14:46:33,522 INFO  [Client-38,ClientThread] Client started
+14:46:33,522 INFO  [Client-39,ClientThread] Client started
+14:46:33,523 INFO  [Client-31,ClientThread] Client started
+14:46:33,535 INFO  [Client-40,ClientThread] Client started
+14:46:33,537 INFO  [Client-41,ClientThread] Client started
+14:46:33,538 INFO  [Client-42,ClientThread] Client started
+14:46:33,539 INFO  [Client-43,ClientThread] Client started
+14:46:33,543 INFO  [Client-44,ClientThread] Client started
+14:46:33,547 INFO  [Client-45,ClientThread] Client started
+14:46:33,552 INFO  [Client-46,ClientThread] Client started
+14:46:33,552 INFO  [Client-47,ClientThread] Client started
+14:46:33,565 INFO  [Client-50,ClientThread] Client started
+14:46:33,565 INFO  [Client-48,ClientThread] Client started
+14:46:33,568 INFO  [Client-51,ClientThread] Client started
+14:46:33,565 INFO  [Client-49,ClientThread] Client started
+14:46:33,574 INFO  [Client-52,ClientThread] Client started
+14:46:33,574 INFO  [Client-54,ClientThread] Client started
+14:46:33,574 INFO  [Client-53,ClientThread] Client started
+14:46:33,575 INFO  [Client-55,ClientThread] Client started
+14:46:33,575 INFO  [Client-56,ClientThread] Client started
+14:46:33,575 INFO  [Client-57,ClientThread] Client started
+14:46:33,575 INFO  [Client-58,ClientThread] Client started
+14:46:33,575 INFO  [Client-59,ClientThread] Client started
+14:46:33,624 INFO  [Client-12,ClientThread] Client finished
+14:46:33,644 INFO  [Client-28,ClientThread] Client finished
+14:46:33,695 INFO  [Client-10,ClientThread] Client finished
+14:46:33,702 INFO  [Client-14,ClientThread] Client finished
+14:46:33,726 INFO  [Client-0,ClientThread] Client finished
+14:46:33,758 INFO  [Client-13,ClientThread] Client finished
+14:46:33,971 INFO  [Client-22,ClientThread] Client finished
+14:46:34,036 INFO  [Client-21,ClientThread] Client finished
+14:46:34,080 INFO  [Client-23,ClientThread] Client finished
+14:46:34,146 INFO  [Client-3,ClientThread] Client finished
+14:46:34,255 INFO  [Client-9,ClientThread] Client finished
+14:46:34,256 INFO  [Client-2,ClientThread] Client finished
+14:46:34,261 INFO  [Client-15,ClientThread] Client finished
+14:46:34,271 INFO  [Client-4,ClientThread] Client finished
+14:46:34,301 INFO  [Client-7,ClientThread] Client finished
+14:46:34,353 INFO  [Client-16,ClientThread] Client finished
+14:46:34,392 INFO  [Client-11,ClientThread] Client finished
+14:46:34,400 INFO  [Client-1,ClientThread] Client finished
+14:46:34,418 INFO  [Client-8,ClientThread] Client finished
+14:46:34,427 INFO  [Client-17,ClientThread] Client finished
+14:46:38,673 INFO  [Client-29,ClientThread] Client finished
+14:46:38,699 INFO  [Client-32,ClientThread] Client finished
+14:46:38,745 INFO  [Client-36,ClientThread] Client finished
+14:46:38,972 INFO  [Client-30,ClientThread] Client finished
+14:46:39,064 INFO  [Client-5,ClientThread] Client finished
+14:46:39,181 INFO  [Client-6,ClientThread] Client finished
+14:46:39,229 INFO  [Client-34,ClientThread] Client finished
+14:46:39,231 INFO  [Client-24,ClientThread] Client finished
+14:46:39,236 INFO  [Client-33,ClientThread] Client finished
+14:46:39,305 INFO  [Client-20,ClientThread] Client finished
+14:46:39,307 INFO  [Client-35,ClientThread] Client finished
+14:46:39,379 INFO  [Client-19,ClientThread] Client finished
+14:46:43,626 INFO  [Client-40,ClientThread] Client finished
+14:46:43,755 INFO  [Client-46,ClientThread] Client finished
+14:46:43,814 INFO  [Client-41,ClientThread] Client finished
+14:46:43,939 INFO  [Client-37,ClientThread] Client finished
+14:46:43,964 INFO  [Client-44,ClientThread] Client finished
+14:46:43,988 INFO  [Client-18,ClientThread] Client finished
+14:46:44,003 INFO  [Client-39,ClientThread] Client finished
+14:46:44,026 INFO  [Client-26,ClientThread] Client finished
+14:46:44,049 INFO  [Client-42,ClientThread] Client finished
+14:46:44,092 INFO  [Client-38,ClientThread] Client finished
+14:46:44,243 INFO  [Client-43,ClientThread] Client finished
+14:46:44,413 INFO  [Client-27,ClientThread] Client finished
+14:46:44,462 INFO  [Client-25,ClientThread] Client finished
+14:46:44,469 INFO  [Client-31,ClientThread] Client finished
+14:46:44,484 INFO  [Client-45,ClientThread] Client finished
+14:46:48,657 INFO  [Client-55,ClientThread] Client finished
+14:46:48,787 INFO  [Client-51,ClientThread] Client finished
+14:46:48,792 INFO  [Client-48,ClientThread] Client finished
+14:46:49,026 INFO  [Client-50,ClientThread] Client finished
+14:46:49,038 INFO  [Client-52,ClientThread] Client finished
+14:46:49,058 INFO  [Client-49,ClientThread] Client finished
+14:46:49,128 INFO  [Client-56,ClientThread] Client finished
+14:46:49,226 INFO  [Client-54,ClientThread] Client finished
+14:46:49,273 INFO  [Client-47,ClientThread] Client finished
+14:46:49,479 INFO  [Client-53,ClientThread] Client finished
+14:46:53,766 INFO  [Client-59,ClientThread] Client finished
+14:46:54,361 INFO  [Client-57,ClientThread] Client finished
+14:46:54,496 INFO  [Client-58,ClientThread] Client finished
+14:46:54,497 INFO  [main,ConnectionReleaserTest] Final count.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 7; Busy Connections: 13
+14:46:54,497 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+14:46:54,511 INFO  [main,ConnectionPoolManagerTest] --------------------------
+14:46:54,511 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+14:46:54,511 INFO  [main,ConnectionPoolManagerTest] --------------------------
+14:46:54,512 INFO  [main,SetupHelper] Setting up DB
+14:46:54,727 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:46:54,772 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+14:46:54,773 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+14:46:54,784 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:46:54,829 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+14:46:54,829 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+14:46:54,831 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:46:54,876 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+14:46:59,881 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+14:46:59,882 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:46:59,928 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+14:46:59,935 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+14:46:59,937 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+14:47:00,004 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
