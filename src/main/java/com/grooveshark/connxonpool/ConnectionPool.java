@@ -1,4 +1,4 @@
-package com.opower.connectionpool;
+package com.grooveshark.connxonpool;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -10,7 +10,6 @@ import java.sql.SQLException;
  * Both throw an {@link java.sql.SQLException} if a failure occurs while getting a connection
  * or releasing one or if some of the necessary {@link PoolConfiguration} properties are not met.
  *
- * @author opower
  *
  */
 public interface ConnectionPool {

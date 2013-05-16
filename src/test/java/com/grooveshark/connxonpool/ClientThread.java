@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.opower.connectionpool;
+package com.grooveshark.connxonpool;
 
 import org.apache.log4j.Logger;
 import java.sql.Connection;

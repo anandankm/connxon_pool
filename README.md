@@ -1,10 +1,10 @@
-# Connection Pool (OPOWER Homework)
+# Connxon Pool
 
-An implementation of connection pool. This provides a thread safe framework to use connections from a pool, maintained and recycled. This reduces
-the latency in getting a connection from the time it was requested. Example usage of this framework would be (look at test implementations in `src/test/java/com/opower/connectionpool/ConnectionPoolManagerTest`),
+A jdbc connection pool implementation. This provides a thread safe framework to use connections from a pool, maintained and recycled. This reduces
+the latency in getting a connection from the time it was requested. Example usage of this framework would be (look at test implementations in `src/test/java/com/grooveshark/connectionpool/ConnectionPoolManagerTest`),
     
 
-    String testURL = "jdbc:mysql://localhost:3306/opower_connxn?allowMultiQueries=true";
+    String testURL = "jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true";
     String testUser = "user"; // mysql user
     String testPass = "pass"; // mysql pass
     ConnectionPoolManager pool;
@@ -60,7 +60,7 @@ Let's look at what they represent.
 6. `POOL_RELEASER_INTERVAL` is the time interval (in `milliseconds`) that the `ConnectionReleaser` instance would run
    to release closed connections to the pool.
 
-## Connection Pool Homework Instructions
+## Connxon Pool Instructions
 
 An important thing to note about testing this Connection Pool Scaffold is the setup.properties
 file provided in `src/test/resources` directory, which contains some additional properties we
@@ -68,23 +68,24 @@ can specify for testing purposes alone.
 
 It contains the following properties (keys are the properties and the values are default values). Lets look at them one by one. 
 
-     TEST_DB=opower_connxn
-     TEST_TABLE=opower_test
+     TEST_DB=gshark_connxn
+     TEST_TABLE=gshark_test
      TEST_DRIVER_NAME=com.mysql.jdbc.Driver
-     TEST_URL=jdbc:mysql://localhost:3306/opower_connxn?allowMultiQueries=true
+     TEST_URL=jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true
      TEST_USER=root
      TEST_PASSWORD=pass
-     TEST_QUERY=select * from opower_test
+     TEST_QUERY=select * from gshark_test
      TEST_CHECK_ROW_VALUES=true
      TEST_DB_SETUP_URL=jdbc:mysql://localhost:3306?allowMultiQueries=true
-     TEST_DB_SETUP_QUERY=DROP DATABASE IF EXISTS opower_connxn;\
-                         CREATE DATABASE opower_connxn; USE opower_connxn;\
-                         DROP TABLE IF EXISTS opower_test;\
-                         CREATE TABLE opower_test (\
+     TEST_DB_SETUP_QUERY=DROP DATABASE IF EXISTS gshark_connxn;\
+                         CREATE DATABASE gshark_connxn; USE gshark_connxn;\
+                         DROP TABLE IF EXISTS gshark_test;\
+                         CREATE TABLE gshark_test (\
                                  Userid INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, \
                                  Name VARCHAR(64) NOT NULL DEFAULT '0' \
                                  )ENGINE=InnoDB DEFAULT CHARSET=utf8;\
-                         INSERT INTO opower_test VALUES (1, 'Anandan'), (2, 'Opower');
+                         INSERT INTO gshark_test VALUES (1, 'Anandan'), (2,
+                         'Grooveshark');
 
 
 1.  `TEST_DB` is database we need for testing our Connection Pool Scaffold.
@@ -110,35 +111,6 @@ Apart from this, [maven][maven] is used to test, compile and package.
 Test reports are stored in `target/surefire-reports` directory
 
 Contact me, if in need of any clarifications: andy.compeer@gmail.com
-
-
-# HOMEWORK INSTRUCTIONS
-
-This is a very basic scaffold project for you to work in for the connection pool homework assignment
-
-## Instructions
-
-Please clone the repository and deliver your solution via an archive format of your choice, including all project files, within 1 calendar week.
-
-Write a connection pool class that implements this interface (it is also located in `src/main/java/com/opower/connectionpool/ConnectionPool.java`):
-
-    public interface ConnectionPool {
-        java.sql.Connection getConnection() throws java.sql.SQLException;
-        void releaseConnection(java.sql.Connection con) throws java.sql.SQLException;
-    }
-
-While we know there are many production-ready implementations of connection pools, this assignment allows for a variety of solutions to a real-world problem.  Your solution will be reviewed by the engineers you would be working with if you joined OPOWER.  We are interested in seeing your real-world design, coding, and testing skills.
-
-## Using this scaffold
-
-This scaffold is provided to help you (and us) build your homework code.
-We've included a `pom.xml`, which is a file used by [maven][maven] to build the project and run other commands.   It also contains
-information on downloading dependent jars needed by your project.  This one contains JUnit, EasyMock and Log4J already, but feel free
-to change it as you see fit.
-
-    mvn compile      # compiles your code in src/main/java
-    mvn test-compile # compile test code in src/test/java
-    mvn test         # run tests in src/test/java for files named Test*.java
 
 
 [maven]:http://maven.apache.org/

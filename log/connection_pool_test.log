@@ -2632,8 +2632,8 @@
 13:25:20,087 INFO  [Thread-46,ConnectionReleaser] Time between runs: 5000
 13:25:20,092 ERROR [main,ConnectionPoolManagerTest] Error occurred
 java.sql.SQLException: Connection pool is closed
-	at com.opower.connectionpool.ConnectionPoolManager.getConnection(ConnectionPoolManager.java:270)
-	at com.opower.connectionpool.ConnectionPoolManagerTest.closeTest(ConnectionPoolManagerTest.java:181)
+	at com.grooveshark.connectionpool.ConnectionPoolManager.getConnection(ConnectionPoolManager.java:270)
+	at com.grooveshark.connectionpool.ConnectionPoolManagerTest.closeTest(ConnectionPoolManagerTest.java:181)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)

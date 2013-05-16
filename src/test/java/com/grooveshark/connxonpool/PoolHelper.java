@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.opower.connectionpool;
+package com.grooveshark.connxonpool;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -113,7 +113,7 @@ public class PoolHelper
      *        needs to be executed and the result set contains exactly the following rows.
      *        <code>
      *        {1, 'Anandan'}
-     *        {2, 'Opower'}
+     *        {2, 'Grooveshark'}
      *        </code>
      */
     public void sqlTest(Connection conn, String sql, boolean checkRowValues) throws SQLException {
@@ -143,7 +143,7 @@ public class PoolHelper
         assertEquals("Anandan", res.getString(2));
         assertTrue(res.next());
         assertEquals(2, res.getInt(1));
-        assertEquals("Opower", res.getString(2));
+        assertEquals("Grooveshark", res.getString(2));
     }
 
 }

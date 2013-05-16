@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.opower.connectionpool;
+package com.grooveshark.connxonpool;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
@@ -41,14 +41,14 @@ public class SetupHelper
     public static String propertiesFileName = "setup.properties";
     public static boolean checkRowValues = false;
     public static String testDriverName = "com.mysql.jdbc.Driver";
-    public static String testDB = "opower_connxn";
-    public static String testTable = "opower_test";
-    public static String testURL = "jdbc:mysql://localhost:3306/opower_connxn?allowMultiQueries=true";
-    public static String testQuery = "SELECT * FROM opower_test";
+    public static String testDB = "gshark_connxn";
+    public static String testTable = "gshark_test";
+    public static String testURL = "jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true";
+    public static String testQuery = "SELECT * FROM gshark_test";
     public static String testUser = "";
     public static String testPass = "";
     public static String dbSetupURL = "";
-    public static String dbSetupQuery = "INSERT INTO opower_test VALUES (1, 'Anandan'), (2, 'Opower')";
+    public static String dbSetupQuery = "INSERT INTO gshark_test VALUES (1, 'Anandan'), (2, 'Grooveshark')";
     public static Properties setupProperties;
 
     public static final Logger log = Logger.getLogger(SetupHelper.class);
