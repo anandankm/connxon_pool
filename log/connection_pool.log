@@ -1,0 +1,78 @@
+17:20:26,011 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:20:26,015 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:20:26,344 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:20:26,344 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:20:26,655 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:20:26,991 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+17:20:26,991 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+17:24:36,011 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:24:36,015 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:25:00,350 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:25:00,353 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:25:00,685 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:25:00,686 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:25:14,790 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:25:14,794 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:25:15,126 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:25:15,127 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:25:15,461 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:28:34,754 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:28:34,758 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:28:35,103 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:28:35,103 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:28:35,415 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:28:35,422 DEBUG [main,ConnectionPoolManager] Current capacity might have been exceeded.
+	Current Capacity = 10, Specified Capacity = 20
+	Available Connections = 0, Busy Connections = 10
+17:52:53,428 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:52:53,432 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:52:53,764 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:52:53,764 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:52:54,125 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:54:42,243 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:54:42,246 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:54:42,606 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:54:42,607 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:54:42,935 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:54:43,000 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+17:57:41,073 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:57:41,075 INFO  [main,ConnectionPoolManagerTest]    CONNECTION POOL TEST   
+17:57:41,075 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:57:41,627 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:57:41,629 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:57:41,975 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:57:41,976 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:57:42,320 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:57:42,384 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+18:00:46,790 INFO  [main,ConnectionPoolManagerTest] --------------------------
+18:00:46,791 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+18:00:46,792 INFO  [main,ConnectionPoolManagerTest] --------------------------
+18:00:47,339 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+18:00:47,341 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+18:00:47,693 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+18:00:47,694 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+18:00:48,000 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+18:00:48,067 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+18:03:52,617 INFO  [main,ConnectionPoolManagerTest] --------------------------
+18:03:52,619 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+18:03:52,619 INFO  [main,ConnectionPoolManagerTest] --------------------------
+18:03:53,172 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+18:03:53,174 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+18:03:53,514 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+18:03:53,514 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+18:03:53,835 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+18:03:53,902 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+18:04:34,240 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+18:04:34,241 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+19:04:14,464 INFO  [main,ConnectionPoolManagerTest] --------------------------
+19:04:14,466 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+19:04:14,466 INFO  [main,ConnectionPoolManagerTest] --------------------------
+19:04:15,046 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+19:04:15,049 INFO  [main,ConnectionPoolManagerTest] Connection String: com.mysql.jdbc.JDBC4Connection@21aed5f9
+19:04:15,050 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+19:04:15,394 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+19:04:15,394 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+19:04:15,747 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+19:04:15,818 INFO  [main,ConnectionPoolManagerTest] Finished maxConnectionsTest()
+19:04:56,144 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+19:04:56,145 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()

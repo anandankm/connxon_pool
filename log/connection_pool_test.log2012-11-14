@@ -1,0 +1,953 @@
+16:20:09,450 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:20:09,452 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:20:09,452 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:20:09,746 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:20:09,754 ERROR [main,ConnectionPoolManagerTest] java.sql.SQLException: No database selected
+16:21:43,450 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:21:43,452 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:21:43,452 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:21:43,458 INFO  [main,ConnectionPoolManagerTest] jdbc:mysql://localhost:3306?allowMultiQueries=true
+16:21:43,459 INFO  [main,ConnectionPoolManagerTest] 
+16:21:43,755 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:21:43,765 ERROR [main,ConnectionPoolManagerTest] java.sql.SQLException: No database selected
+16:22:13,610 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:22:13,612 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:22:13,613 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:22:13,619 INFO  [main,ConnectionPoolManagerTest] jdbc:mysql://localhost:3306?allowMultiQueries=true
+16:22:13,619 INFO  [main,ConnectionPoolManagerTest] DROP DATABASE IF EXISTS gshark_connxn;CREATE DATABASE gshark_connxn; USE gshark_connxn;DROP TABLE IF EXISTS gshark_test;CREATE TABLE gshark_test (Userid INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY Name VARCHAR(64) NOT NULL DEFAULT '0' )ENGINE=InnoDB DEFAULT CHARSET=utf8;INSERT INTO gshark_test VALUES (1, 'Anandan'), (2, 'Grooveshark');
+16:22:13,906 ERROR [main,ConnectionPoolManagerTest] Failed to setup database
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Name VARCHAR(64) NOT NULL DEFAULT '0' )ENGINE=InnoDB DEFAULT CHARSET=utf8;INSERT' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943)
+	at com.mysql.jdbc.MysqlIO.readAllResults(MysqlIO.java:1833)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2618)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2568)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:842)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:681)
+	at com.gshark.connectionpool.ConnectionPoolManagerTest.dbSetup(ConnectionPoolManagerTest.java:117)
+	at com.gshark.connectionpool.ConnectionPoolManagerTest.testSetup(ConnectionPoolManagerTest.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:104)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:147)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:101)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:139)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:82)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:81)
+16:23:12,447 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:23:12,449 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:23:12,450 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:23:12,924 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:23:12,934 ERROR [main,ConnectionPoolManagerTest] java.sql.SQLException: No database selected
+16:23:58,430 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:23:58,432 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:23:58,432 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:23:58,439 INFO  [main,ConnectionPoolManagerTest] Setting up DB
+16:23:58,961 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:23:58,968 ERROR [main,ConnectionPoolManagerTest] java.sql.SQLException: No database selected
+16:25:09,785 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:25:09,787 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:25:09,788 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:25:09,794 INFO  [main,ConnectionPoolManagerTest] Setting up DB
+16:25:10,302 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:25:10,309 ERROR [main,ConnectionPoolManagerTest] java.sql.SQLException: No database selected
+16:27:55,575 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:27:55,577 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:27:55,577 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:27:55,583 INFO  [main,ConnectionPoolManagerTest] Setting up DB
+16:27:56,136 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:27:56,139 INFO  [main,ConnectionPoolManagerTest] URL: jdbc:mysql://localhost:3306?gshark_connxn?allowMultiQueries=true
+16:27:56,147 ERROR [main,ConnectionPoolManagerTest] java.sql.SQLException: No database selected
+16:28:44,024 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:28:44,025 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:28:44,026 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:28:44,032 INFO  [main,ConnectionPoolManagerTest] Setting up DB
+16:28:44,553 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:28:44,554 INFO  [main,ConnectionPoolManagerTest] URL: jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true
+16:28:44,556 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+16:38:21,704 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:38:21,706 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:38:21,706 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:38:21,712 INFO  [main,ConnectionPoolManagerTest] Setting up DB
+16:38:22,116 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+16:38:22,244 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:38:22,246 INFO  [main,ConnectionPoolManagerTest] URL: jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true
+16:38:22,247 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+16:39:06,652 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:39:06,654 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+16:39:06,654 INFO  [main,ConnectionPoolManagerTest] --------------------------
+16:39:06,660 INFO  [main,ConnectionPoolManagerTest] Setting up DB
+16:39:07,049 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+16:39:07,178 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+16:39:07,180 INFO  [main,ConnectionPoolManagerTest] URL: jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true
+16:39:07,181 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+16:39:07,185 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+16:39:07,292 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+16:39:07,293 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+16:39:07,295 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+16:39:07,373 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+16:39:09,455 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+16:39:09,457 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+16:39:09,545 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+16:39:09,545 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+16:39:09,547 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+16:39:09,618 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+16:39:09,618 INFO  [main,ConnectionPoolManagerTest] URL: jdbc:mysql://localhost:3306/gshark_connxn?allowMultiQueries=true
+16:39:09,619 DEBUG [main,ConnectionPoolManager] At start
+16:39:09,620 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+17:16:08,789 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:16:08,790 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+17:16:08,791 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:16:08,797 INFO  [main,SetupHelper] Setting up DB
+17:16:09,215 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:16:09,353 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:16:09,356 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:16:09,359 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:16:09,462 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:16:09,463 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:16:09,465 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:16:09,540 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:16:11,610 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+17:16:11,612 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:16:11,699 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+17:16:11,700 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+17:16:11,702 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:16:11,775 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+17:16:11,777 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+17:43:06,814 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:43:06,816 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+17:43:06,817 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:45:44,502 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:45:44,503 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+17:45:44,504 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:45:44,510 INFO  [main,SetupHelper] Setting up DB
+17:45:44,974 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:45:45,090 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:45:45,093 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:45:45,096 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:45:45,208 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:45:45,209 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:45:45,211 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:45:45,288 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:45:47,352 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+17:45:47,353 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:45:47,441 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+17:45:47,442 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+17:45:47,444 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:45:47,517 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+17:45:47,518 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+17:49:24,194 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:49:24,195 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+17:49:24,196 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:49:24,202 INFO  [main,SetupHelper] Setting up DB
+17:49:24,612 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:49:24,744 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:49:24,747 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:49:24,750 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:49:24,856 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:49:24,856 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:49:24,858 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:49:24,939 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:50:05,011 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+17:50:05,012 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:05,102 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+17:50:05,103 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+17:50:05,105 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:05,178 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+17:50:05,179 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+17:50:49,859 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:50:49,861 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+17:50:49,861 INFO  [main,ConnectionPoolManagerTest] --------------------------
+17:50:49,867 INFO  [main,SetupHelper] Setting up DB
+17:50:50,279 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:50,403 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+17:50:50,405 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+17:50:50,408 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:50,520 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+17:50:50,521 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+17:50:50,523 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:50,607 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+17:50:52,681 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+17:50:52,682 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:52,770 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+17:50:52,770 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+17:50:52,772 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+17:50:52,845 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+17:50:52,847 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+18:03:24,324 INFO  [main,ConnectionPoolManagerTest] --------------------------
+18:03:24,325 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+18:03:24,326 INFO  [main,ConnectionPoolManagerTest] --------------------------
+18:03:24,332 INFO  [main,SetupHelper] Setting up DB
+18:03:24,724 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+18:03:24,840 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+18:03:24,842 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+18:03:24,846 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+18:03:24,951 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+18:03:24,952 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+18:03:24,954 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+18:03:25,041 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+18:03:27,113 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+18:03:27,115 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+18:03:27,204 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+18:03:27,205 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+18:03:27,207 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+18:03:27,279 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+18:03:27,280 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:15:05,710 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:15:05,711 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:15:05,712 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:15:05,718 INFO  [main,SetupHelper] Setting up DB
+20:15:06,135 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:15:06,262 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:15:06,265 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:15:06,268 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:15:06,383 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:15:06,383 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:15:06,386 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:15:06,467 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:15:08,537 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:15:08,539 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:15:08,627 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:15:08,628 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+20:15:08,629 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:15:08,699 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:15:08,700 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:20:56,151 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:20:56,153 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:20:56,154 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:20:56,161 INFO  [main,SetupHelper] Setting up DB
+20:20:56,581 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:20:56,702 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:20:56,704 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:20:56,708 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:20:56,811 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:20:56,812 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:20:56,814 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:20:56,895 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:20:58,963 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:20:58,965 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:20:59,053 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:20:59,054 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+20:20:59,056 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:20:59,127 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:20:59,128 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:20:59,129 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:20:59,165 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+20:20:59,166 INFO  [Thread-1,ClientThread] Test log by a client thread
+20:20:59,166 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+20:22:53,667 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:22:53,669 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:22:53,669 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:22:53,676 INFO  [main,SetupHelper] Setting up DB
+20:22:54,080 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:22:54,206 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:22:54,208 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:22:54,211 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:22:54,324 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:22:54,325 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:22:54,327 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:22:54,408 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:22:56,479 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:22:56,481 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:22:56,570 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:22:56,571 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+20:22:56,573 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:22:56,645 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:22:56,646 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:22:56,647 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:22:56,683 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+20:22:56,684 INFO  [ClientThread-1,ClientThread] Test log by a client thread
+20:22:56,684 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+20:23:28,280 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:23:28,282 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:23:28,282 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:23:28,289 INFO  [main,SetupHelper] Setting up DB
+20:23:28,705 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:23:28,831 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:23:28,833 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:23:28,836 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:23:28,943 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:23:28,943 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:23:28,945 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:23:29,029 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:23:31,098 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:23:31,100 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:23:31,188 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:23:31,188 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+20:23:31,190 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:23:31,260 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:23:31,261 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:23:31,262 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:23:31,299 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+20:23:31,300 INFO  [Client-1,ClientThread] Test log by a client thread
+20:23:31,300 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+20:35:20,530 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:35:20,532 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:35:20,532 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:35:20,538 INFO  [main,SetupHelper] Setting up DB
+20:35:20,955 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:35:21,070 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:35:21,072 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:35:21,075 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:35:21,191 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:35:21,192 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:35:21,194 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:35:21,277 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:35:23,347 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:35:23,349 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:35:23,437 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:35:23,446 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+20:35:23,449 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:35:23,514 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:35:23,515 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:35:23,516 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:35:23,551 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+20:35:23,552 INFO  [Client-1,ClientThread] Client started
+20:35:23,553 INFO  [Client-1,ClientThread] Client finished
+20:35:23,553 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+20:39:10,763 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:39:10,765 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:39:10,766 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:39:10,772 INFO  [main,SetupHelper] Setting up DB
+20:39:11,163 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:39:11,293 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:39:11,296 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:39:11,299 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:39:11,396 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:39:11,396 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:39:11,398 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:39:11,478 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:39:13,550 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:39:13,551 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:39:13,638 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:39:13,648 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+20:39:13,659 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+20:39:13,664 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:39:13,722 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:39:13,724 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:39:13,724 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:39:13,759 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+20:39:13,760 INFO  [Client-1,ClientThread] Client started
+20:39:13,761 INFO  [Client-1,ClientThread] Client finished
+20:39:13,761 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+20:52:06,828 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:52:06,830 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+20:52:06,830 INFO  [main,ConnectionPoolManagerTest] --------------------------
+20:52:06,837 INFO  [main,SetupHelper] Setting up DB
+20:52:07,237 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:52:07,374 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+20:52:07,376 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+20:52:07,380 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:52:07,491 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+20:52:07,492 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+20:52:07,493 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:52:07,568 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+20:52:09,639 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+20:52:09,641 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:52:09,728 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+20:52:09,738 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+20:52:09,748 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+20:52:09,749 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+20:52:09,751 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:52:09,804 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+20:52:09,805 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+20:52:09,806 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+20:52:09,841 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+20:52:09,842 INFO  [Client-1,ClientThread] Client started
+20:52:09,843 INFO  [Client-1,ClientThread] Client finished
+20:52:09,843 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+21:20:30,244 INFO  [main,ConnectionPoolManagerTest] --------------------------
+21:20:30,245 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+21:20:30,246 INFO  [main,ConnectionPoolManagerTest] --------------------------
+21:20:30,253 INFO  [main,SetupHelper] Setting up DB
+21:20:30,627 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:20:30,754 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+21:20:30,756 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+21:20:30,760 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:20:30,873 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+21:20:30,874 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+21:20:30,876 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:20:30,959 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+21:20:33,028 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+21:20:33,030 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:20:33,119 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+21:20:33,129 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+21:20:33,139 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+21:20:33,140 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+21:20:33,142 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:20:33,197 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+21:20:33,198 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+21:20:33,199 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:20:33,234 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+21:20:33,235 INFO  [Client-1,ClientThread] Client started
+21:20:33,235 INFO  [Client-1,ClientThread] Client started
+21:20:33,236 INFO  [Client-1,ClientThread] Client finished
+21:20:33,236 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,235 INFO  [Client-1,ClientThread] Client started
+21:20:33,237 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,238 INFO  [Client-1,ClientThread] Client started
+21:20:33,238 INFO  [Client-1,ClientThread] Client started
+21:20:33,239 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,239 INFO  [Client-1,ClientThread] Client started
+21:20:33,238 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,239 INFO  [Client-1,ClientThread] Client started
+21:20:33,239 INFO  [Client-1,ClientThread] Client started
+21:20:33,240 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,239 INFO  [Client-1,ClientThread] Client started
+21:20:33,239 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,240 INFO  [Client-1,ClientThread] Client started
+21:20:33,239 INFO  [Client-1,ClientThread] Client started
+21:20:33,239 INFO  [Client-1,ClientThread] Client started
+21:20:33,252 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,252 INFO  [Client-1,ClientThread] Client started
+21:20:33,252 INFO  [Client-1,ClientThread] Client started
+21:20:33,253 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,241 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,241 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,254 INFO  [Client-1,ClientThread] Client started
+21:20:33,254 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,254 INFO  [Client-1,ClientThread] Client started
+21:20:33,255 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,240 INFO  [Client-1,ClientThread] Client started
+21:20:33,240 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,240 INFO  [Client-1,ClientThread] Client started
+21:20:33,255 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,240 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,240 INFO  [Client-1,ClientThread] Client started
+21:20:33,256 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,240 INFO  [Client-1,ClientThread] Client started
+21:20:33,256 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,255 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,253 ERROR [Client-1,PoolHelper] java.sql.SQLException: Connection pool closed
+21:20:33,263 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+21:43:11,152 INFO  [main,ConnectionPoolManagerTest] --------------------------
+21:43:11,153 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+21:43:11,154 INFO  [main,ConnectionPoolManagerTest] --------------------------
+21:43:11,161 INFO  [main,SetupHelper] Setting up DB
+21:43:11,551 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:43:11,673 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+21:43:11,677 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+21:43:11,683 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:43:11,783 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+21:43:11,784 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+21:43:11,786 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:43:11,871 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+21:43:13,942 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+21:43:13,944 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:43:14,033 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+21:43:14,042 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+21:43:14,053 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+21:43:14,053 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+21:43:14,054 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:43:14,113 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+21:43:14,115 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+21:43:14,115 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+21:43:14,150 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+21:43:14,151 INFO  [Client-0,ClientThread] Client started
+21:43:14,151 INFO  [Client-1,ClientThread] Client started
+21:43:14,152 INFO  [Client-0,ClientThread] Client finished
+21:43:14,152 INFO  [Client-2,ClientThread] Client started
+21:43:14,152 INFO  [Client-1,ClientThread] Client finished
+21:43:14,153 INFO  [Client-2,ClientThread] Client finished
+21:43:14,153 INFO  [Client-3,ClientThread] Client started
+21:43:14,153 INFO  [Client-4,ClientThread] Client started
+21:43:14,153 INFO  [Client-3,ClientThread] Client finished
+21:43:14,153 INFO  [Client-4,ClientThread] Client finished
+21:43:14,158 INFO  [Client-5,ClientThread] Client started
+21:43:14,158 INFO  [Client-9,ClientThread] Client started
+21:43:14,158 INFO  [Client-8,ClientThread] Client started
+21:43:14,159 INFO  [Client-7,ClientThread] Client started
+21:43:14,158 INFO  [Client-6,ClientThread] Client started
+21:43:14,160 INFO  [Client-19,ClientThread] Client started
+21:43:14,160 INFO  [Client-7,ClientThread] Client finished
+21:43:14,160 INFO  [Client-18,ClientThread] Client started
+21:43:14,160 INFO  [Client-17,ClientThread] Client started
+21:43:14,160 INFO  [Client-16,ClientThread] Client started
+21:43:14,160 INFO  [Client-15,ClientThread] Client started
+21:43:14,175 INFO  [Client-19,ClientThread] Client finished
+21:43:14,178 INFO  [Client-17,ClientThread] Client finished
+21:43:14,182 INFO  [Client-18,ClientThread] Client finished
+21:43:14,159 INFO  [Client-14,ClientThread] Client started
+21:43:14,159 INFO  [Client-12,ClientThread] Client started
+21:43:14,159 INFO  [Client-13,ClientThread] Client started
+21:43:14,159 INFO  [Client-11,ClientThread] Client started
+21:43:14,159 INFO  [Client-9,ClientThread] Client finished
+21:43:14,159 INFO  [Client-5,ClientThread] Client finished
+21:43:14,159 INFO  [Client-10,ClientThread] Client started
+21:43:14,178 INFO  [Client-16,ClientThread] Client finished
+21:43:14,161 INFO  [Client-6,ClientThread] Client finished
+21:43:14,160 INFO  [Client-8,ClientThread] Client finished
+21:43:14,187 INFO  [Client-15,ClientThread] Client finished
+21:43:14,188 INFO  [Client-14,ClientThread] Client finished
+21:43:14,193 INFO  [Client-13,ClientThread] Client finished
+21:43:14,193 INFO  [Client-11,ClientThread] Client finished
+21:43:14,193 INFO  [Client-12,ClientThread] Client finished
+21:43:14,193 INFO  [Client-10,ClientThread] Client finished
+21:43:14,194 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+22:03:10,272 INFO  [main,ConnectionPoolManagerTest] --------------------------
+22:03:10,273 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+22:03:10,274 INFO  [main,ConnectionPoolManagerTest] --------------------------
+22:03:10,281 INFO  [main,SetupHelper] Setting up DB
+22:03:10,698 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:03:10,822 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+22:03:10,824 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+22:03:10,828 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:03:10,938 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+22:03:10,938 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+22:03:10,941 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:03:11,019 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+22:03:13,089 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:03:13,090 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:03:13,178 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+22:03:13,187 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+22:03:13,198 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+22:03:13,198 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+22:03:13,200 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:03:13,262 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+22:03:13,263 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+22:03:13,264 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:03:13,298 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+22:03:13,300 INFO  [Client-0,ClientThread] Client started
+22:03:13,300 INFO  [Client-0,ClientThread] Sleeping for: 240
+22:03:13,301 INFO  [Client-1,ClientThread] Client started
+22:03:13,302 INFO  [Client-1,ClientThread] Sleeping for: 725
+22:03:13,302 INFO  [Client-2,ClientThread] Client started
+22:03:13,302 INFO  [Client-2,ClientThread] Sleeping for: 729
+22:03:13,302 INFO  [Client-3,ClientThread] Client started
+22:03:13,302 INFO  [Client-3,ClientThread] Sleeping for: 788
+22:03:13,303 INFO  [Client-4,ClientThread] Client started
+22:03:13,303 INFO  [Client-4,ClientThread] Sleeping for: 420
+22:03:13,303 INFO  [Client-5,ClientThread] Client started
+22:03:13,303 INFO  [Client-5,ClientThread] Sleeping for: 756
+22:03:13,303 INFO  [Client-6,ClientThread] Client started
+22:03:13,304 INFO  [Client-6,ClientThread] Sleeping for: 516
+22:03:13,304 INFO  [Client-7,ClientThread] Client started
+22:03:13,304 INFO  [Client-7,ClientThread] Sleeping for: 498
+22:03:13,304 INFO  [Client-8,ClientThread] Client started
+22:03:13,304 INFO  [Client-8,ClientThread] Sleeping for: 973
+22:03:13,304 INFO  [Client-9,ClientThread] Client started
+22:03:13,305 INFO  [Client-12,ClientThread] Client started
+22:03:13,305 INFO  [Client-12,ClientThread] Sleeping for: 185
+22:03:13,305 INFO  [Client-13,ClientThread] Client started
+22:03:13,304 INFO  [Client-11,ClientThread] Client started
+22:03:13,304 INFO  [Client-10,ClientThread] Client started
+22:03:13,332 INFO  [Client-19,ClientThread] Client started
+22:03:13,337 INFO  [Client-13,ClientThread] Sleeping for: 749
+22:03:13,337 INFO  [Client-17,ClientThread] Client started
+22:03:13,332 INFO  [Client-18,ClientThread] Client started
+22:03:13,331 INFO  [Client-15,ClientThread] Client started
+22:03:13,331 INFO  [Client-16,ClientThread] Client started
+22:03:13,331 INFO  [Client-14,ClientThread] Client started
+22:03:13,340 INFO  [Client-10,ClientThread] Sleeping for: 602
+22:03:13,341 INFO  [Client-11,ClientThread] Sleeping for: 980
+22:03:13,341 INFO  [Client-15,ClientThread] Sleeping for: 494
+22:03:13,342 INFO  [Client-14,ClientThread] Sleeping for: 195
+22:03:13,342 INFO  [Client-17,ClientThread] Sleeping for: 715
+22:03:13,342 INFO  [Client-9,ClientThread] Sleeping for: 533
+22:03:13,344 INFO  [Client-19,ClientThread] Sleeping for: 197
+22:03:13,345 INFO  [Client-16,ClientThread] Sleeping for: 204
+22:03:13,344 INFO  [Client-18,ClientThread] Sleeping for: 357
+22:03:13,491 INFO  [Client-12,ClientThread] Client finished
+22:03:13,538 INFO  [Client-14,ClientThread] Client finished
+22:03:13,541 INFO  [Client-0,ClientThread] Client finished
+22:03:13,542 INFO  [Client-19,ClientThread] Client finished
+22:03:13,549 INFO  [Client-16,ClientThread] Client finished
+22:03:13,710 INFO  [Client-18,ClientThread] Client finished
+22:03:13,724 INFO  [Client-4,ClientThread] Client finished
+22:03:13,803 INFO  [Client-7,ClientThread] Client finished
+22:03:13,820 INFO  [Client-6,ClientThread] Client finished
+22:03:13,836 INFO  [Client-15,ClientThread] Client finished
+22:03:13,877 INFO  [Client-9,ClientThread] Client finished
+22:03:13,943 INFO  [Client-10,ClientThread] Client finished
+22:03:14,027 INFO  [Client-1,ClientThread] Client finished
+22:03:14,032 INFO  [Client-2,ClientThread] Client finished
+22:03:14,058 INFO  [Client-17,ClientThread] Client finished
+22:03:14,060 INFO  [Client-5,ClientThread] Client finished
+22:03:14,087 INFO  [Client-13,ClientThread] Client finished
+22:03:14,091 INFO  [Client-3,ClientThread] Client finished
+22:03:14,278 INFO  [Client-8,ClientThread] Client finished
+22:03:14,321 INFO  [Client-11,ClientThread] Client finished
+22:03:14,322 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+22:05:07,033 INFO  [main,ConnectionPoolManagerTest] --------------------------
+22:05:07,035 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+22:05:07,035 INFO  [main,ConnectionPoolManagerTest] --------------------------
+22:05:07,042 INFO  [main,SetupHelper] Setting up DB
+22:05:07,452 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:05:07,584 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+22:05:07,586 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+22:05:07,590 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:05:07,684 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+22:05:07,685 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+22:05:07,687 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:05:07,771 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+22:05:09,841 DEBUG [main,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:09,843 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:05:09,930 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+22:05:09,940 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@75982fc1] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+22:05:09,950 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+22:05:09,950 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+22:05:09,952 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:05:10,013 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+22:05:10,014 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
+22:05:10,015 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+22:05:10,050 INFO  [main,ConnectionPoolManagerTest] Starting multiple clients test
+22:05:10,051 INFO  [Client-0,ClientThread] Client started
+22:05:10,051 INFO  [Client-1,ClientThread] Client started
+22:05:10,051 INFO  [Client-0,ClientThread] Sleeping for: 588
+22:05:10,052 INFO  [Client-3,ClientThread] Client started
+22:05:10,052 INFO  [Client-3,ClientThread] Sleeping for: 763
+22:05:10,052 INFO  [Client-2,ClientThread] Client started
+22:05:10,052 INFO  [Client-1,ClientThread] Sleeping for: 421
+22:05:10,052 INFO  [Client-4,ClientThread] Client started
+22:05:10,052 INFO  [Client-4,ClientThread] Sleeping for: 730
+22:05:10,053 INFO  [Client-2,ClientThread] Sleeping for: 332
+22:05:10,052 INFO  [Client-5,ClientThread] Client started
+22:05:10,052 INFO  [Client-6,ClientThread] Client started
+22:05:10,053 INFO  [Client-6,ClientThread] Sleeping for: 140
+22:05:10,053 INFO  [Client-5,ClientThread] Sleeping for: 657
+22:05:10,054 INFO  [Client-7,ClientThread] Client started
+22:05:10,054 INFO  [Client-10,ClientThread] Client started
+22:05:10,054 INFO  [Client-8,ClientThread] Client started
+22:05:10,055 INFO  [Client-14,ClientThread] Client started
+22:05:10,065 INFO  [Client-18,ClientThread] Client started
+22:05:10,055 INFO  [Client-11,ClientThread] Client started
+22:05:10,055 INFO  [Client-13,ClientThread] Client started
+22:05:10,055 INFO  [Client-10,ClientThread] Sleeping for: 374
+22:05:10,066 INFO  [Client-17,ClientThread] Client started
+22:05:10,070 INFO  [Client-13,ClientThread] Sleeping for: 908
+22:05:10,070 INFO  [Client-21,ClientThread] Client started
+22:05:10,070 INFO  [Client-22,ClientThread] Client started
+22:05:10,073 INFO  [Client-11,ClientThread] Sleeping for: 183
+22:05:10,074 INFO  [Client-21,ClientThread] Sleeping for: 134
+22:05:10,055 INFO  [Client-12,ClientThread] Client started
+22:05:10,075 INFO  [Client-23,ClientThread] Client started
+22:05:10,077 INFO  [Client-22,ClientThread] Sleeping for: 912
+22:05:10,078 INFO  [Client-17,ClientThread] Sleeping for: 199
+22:05:10,055 INFO  [Client-7,ClientThread] Sleeping for: 771
+22:05:10,054 INFO  [Client-9,ClientThread] Client started
+22:05:10,078 INFO  [Client-24,ClientThread] Client started
+22:05:10,078 INFO  [Client-12,ClientThread] Sleeping for: 215
+22:05:10,070 INFO  [Client-20,ClientThread] Client started
+22:05:10,070 INFO  [Client-18,ClientThread] Sleeping for: 273
+22:05:10,066 INFO  [Client-19,ClientThread] Client started
+22:05:10,065 INFO  [Client-16,ClientThread] Client started
+22:05:10,065 INFO  [Client-15,ClientThread] Client started
+22:05:10,055 INFO  [Client-8,ClientThread] Sleeping for: 908
+22:05:10,083 INFO  [Client-9,ClientThread] Sleeping for: 548
+22:05:10,084 INFO  [Client-23,ClientThread] Sleeping for: 141
+22:05:10,084 INFO  [Client-25,ClientThread] Client started
+22:05:10,084 INFO  [Client-24,ClientThread] Sleeping for: 144
+22:05:10,085 DEBUG [Client-19,ConnectionPoolManager] Capacity exceeded!!
+22:05:10,086 DEBUG [Client-20,ConnectionPoolManager] Capacity exceeded!!
+22:05:10,086 DEBUG [Client-16,ConnectionPoolManager] Capacity exceeded!!
+22:05:10,087 INFO  [Client-27,ClientThread] Client started
+22:05:10,087 INFO  [Client-28,ClientThread] Client started
+22:05:10,088 INFO  [Client-29,ClientThread] Client started
+22:05:10,088 INFO  [Client-26,ClientThread] Client started
+22:05:10,089 DEBUG [Client-15,ConnectionPoolManager] Capacity exceeded!!
+22:05:10,091 DEBUG [Client-14,ConnectionPoolManager] Capacity exceeded!!
+22:05:10,089 DEBUG [Client-25,ConnectionPoolManager] Capacity exceeded!!
+22:05:10,194 INFO  [Client-6,ClientThread] Client finished
+22:05:10,208 INFO  [Client-21,ClientThread] Client finished
+22:05:10,225 INFO  [Client-23,ClientThread] Client finished
+22:05:10,229 INFO  [Client-24,ClientThread] Client finished
+22:05:10,258 INFO  [Client-11,ClientThread] Client finished
+22:05:10,277 INFO  [Client-17,ClientThread] Client finished
+22:05:10,296 INFO  [Client-12,ClientThread] Client finished
+22:05:10,353 INFO  [Client-18,ClientThread] Client finished
+22:05:10,385 INFO  [Client-2,ClientThread] Client finished
+22:05:10,441 INFO  [Client-10,ClientThread] Client finished
+22:05:10,474 INFO  [Client-1,ClientThread] Client finished
+22:05:10,632 INFO  [Client-9,ClientThread] Client finished
+22:05:10,640 INFO  [Client-0,ClientThread] Client finished
+22:05:10,711 INFO  [Client-5,ClientThread] Client finished
+22:05:10,783 INFO  [Client-4,ClientThread] Client finished
+22:05:10,815 INFO  [Client-3,ClientThread] Client finished
+22:05:10,850 INFO  [Client-7,ClientThread] Client finished
+22:05:10,978 INFO  [Client-13,ClientThread] Client finished
+22:05:10,989 INFO  [Client-8,ClientThread] Client finished
+22:05:10,990 INFO  [Client-22,ClientThread] Client finished
+22:05:12,085 DEBUG [Client-19,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,086 ERROR [Client-19,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,086 DEBUG [Client-20,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,086 DEBUG [Client-16,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,087 ERROR [Client-16,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,086 ERROR [Client-20,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,087 DEBUG [Client-27,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,088 ERROR [Client-27,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,088 DEBUG [Client-29,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,088 DEBUG [Client-26,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,088 ERROR [Client-26,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,088 DEBUG [Client-28,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,089 ERROR [Client-29,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,089 ERROR [Client-28,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,092 DEBUG [Client-15,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,092 ERROR [Client-15,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,092 DEBUG [Client-25,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,092 DEBUG [Client-14,ConnectionPoolManager] Timed out.
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 20
+22:05:12,093 ERROR [Client-14,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,093 ERROR [Client-25,PoolHelper] java.sql.SQLException: Timed out. No available connection after waiting for 2 seconds.
+22:05:12,094 INFO  [main,ConnectionPoolManagerTest] Finished multiple clients test
+23:38:54,940 INFO  [main,ConnectionReleaserTest] -----------------------------------
+23:38:54,942 INFO  [main,ConnectionReleaserTest] -  CONNECTION POOL RELEASER TEST  -
+23:38:54,942 INFO  [main,ConnectionReleaserTest] -----------------------------------
+23:38:54,949 INFO  [main,SetupHelper] Setting up DB
+23:38:55,361 INFO  [main,ConnectionReleaserTest] Setting up ConnectionPoolManager
+23:38:55,473 INFO  [main,ConnectionReleaserTest] Starting multiple clients test
+23:38:55,480 INFO  [Client-0,ClientThread] Client started
+23:38:55,481 INFO  [Client-0,ClientThread] Sleeping for: 870
+23:38:55,480 INFO  [Client-1,ClientThread] Client started
+23:38:55,481 INFO  [Client-1,ClientThread] Sleeping for: 814
+23:38:55,481 INFO  [Client-3,ClientThread] Client started
+23:38:55,482 INFO  [Client-3,ClientThread] Sleeping for: 548
+23:38:55,481 INFO  [Client-2,ClientThread] Client started
+23:38:55,482 INFO  [Client-2,ClientThread] Sleeping for: 414
+23:38:55,482 INFO  [Client-5,ClientThread] Client started
+23:38:55,483 INFO  [Client-5,ClientThread] Sleeping for: 191
+23:38:55,482 INFO  [Client-4,ClientThread] Client started
+23:38:55,483 INFO  [Client-4,ClientThread] Sleeping for: 223
+23:38:55,490 INFO  [Client-6,ClientThread] Client started
+23:38:55,491 INFO  [Client-8,ClientThread] Client started
+23:38:55,491 INFO  [Client-8,ClientThread] Sleeping for: 976
+23:38:55,491 INFO  [Client-7,ClientThread] Client started
+23:38:55,491 INFO  [Client-16,ClientThread] Client started
+23:38:55,491 INFO  [Client-15,ClientThread] Client started
+23:38:55,491 INFO  [Client-14,ClientThread] Client started
+23:38:55,493 INFO  [Client-16,ClientThread] Sleeping for: 750
+23:38:55,491 INFO  [Client-13,ClientThread] Client started
+23:38:55,491 INFO  [Client-12,ClientThread] Client started
+23:38:55,491 INFO  [Client-11,ClientThread] Client started
+23:38:55,500 INFO  [Client-15,ClientThread] Sleeping for: 859
+23:38:55,501 INFO  [Client-23,ClientThread] Client started
+23:38:55,501 INFO  [Client-14,ClientThread] Sleeping for: 438
+23:38:55,491 INFO  [Client-9,ClientThread] Client started
+23:38:55,491 INFO  [Client-10,ClientThread] Client started
+23:38:55,491 INFO  [Client-6,ClientThread] Sleeping for: 983
+23:38:55,503 INFO  [Client-26,ClientThread] Client started
+23:38:55,503 INFO  [Client-25,ClientThread] Client started
+23:38:55,512 INFO  [Client-9,ClientThread] Sleeping for: 866
+23:38:55,515 INFO  [Client-13,ClientThread] Sleeping for: 553
+23:38:55,515 INFO  [Client-11,ClientThread] Sleeping for: 668
+23:38:55,515 INFO  [Client-10,ClientThread] Sleeping for: 285
+23:38:55,517 INFO  [Client-25,ClientThread] Sleeping for: 882
+23:38:55,495 INFO  [Client-24,ClientThread] Client started
+23:38:55,492 INFO  [Client-22,ClientThread] Client started
+23:38:55,492 INFO  [Client-21,ClientThread] Client started
+23:38:55,492 INFO  [Client-20,ClientThread] Client started
+23:38:55,491 INFO  [Client-19,ClientThread] Client started
+23:38:55,491 INFO  [Client-18,ClientThread] Client started
+23:38:55,491 INFO  [Client-17,ClientThread] Client started
+23:38:55,491 INFO  [Client-7,ClientThread] Sleeping for: 859
+23:38:55,523 INFO  [Client-27,ClientThread] Client started
+23:38:55,517 INFO  [Client-23,ClientThread] Sleeping for: 690
+23:38:55,513 INFO  [Client-12,ClientThread] Sleeping for: 181
+23:38:55,529 INFO  [Client-17,ClientThread] Sleeping for: 162
+23:38:55,535 DEBUG [Client-22,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,536 DEBUG [Client-21,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,539 DEBUG [Client-20,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,540 DEBUG [Client-18,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,540 DEBUG [Client-19,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,543 DEBUG [Client-27,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,544 INFO  [Client-28,ClientThread] Client started
+23:38:55,548 DEBUG [Client-24,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,549 DEBUG [Client-26,ConnectionPoolManager] Capacity exceeded!!
+23:38:55,552 INFO  [Client-29,ClientThread] Client started
+23:38:55,675 INFO  [Client-5,ClientThread] Client finished
+23:38:55,692 INFO  [Client-17,ClientThread] Client finished
+23:38:55,706 INFO  [Client-4,ClientThread] Client finished
+23:38:55,710 INFO  [Client-12,ClientThread] Client finished
+23:38:55,801 INFO  [Client-10,ClientThread] Client finished
+23:38:55,897 INFO  [Client-2,ClientThread] Client finished
+23:38:55,939 INFO  [Client-14,ClientThread] Client finished
+23:38:56,030 INFO  [Client-3,ClientThread] Client finished
+23:38:56,068 INFO  [Client-13,ClientThread] Client finished
+23:38:56,184 INFO  [Client-11,ClientThread] Client finished
+23:38:56,219 INFO  [Client-23,ClientThread] Client finished
+23:38:56,257 INFO  [Client-16,ClientThread] Client finished
+23:38:56,296 INFO  [Client-1,ClientThread] Client finished
+23:38:56,352 INFO  [Client-0,ClientThread] Client finished
+23:38:56,360 INFO  [Client-15,ClientThread] Client finished
+23:38:56,381 INFO  [Client-9,ClientThread] Client finished
+23:38:56,382 INFO  [Client-7,ClientThread] Client finished
+23:38:56,400 INFO  [Client-25,ClientThread] Client finished
+23:38:56,468 INFO  [Client-8,ClientThread] Client finished
+23:38:56,489 INFO  [Client-6,ClientThread] Client finished
+23:39:15,488 INFO  [Client-21,ClientThread] Sleeping for: 639
+23:39:15,489 INFO  [Client-22,ClientThread] Sleeping for: 400
+23:39:15,497 INFO  [Client-27,ClientThread] Sleeping for: 213
+23:39:15,498 INFO  [Client-24,ClientThread] Sleeping for: 593
+23:39:15,500 INFO  [Client-18,ClientThread] Sleeping for: 781
+23:39:15,506 INFO  [Client-29,ClientThread] Sleeping for: 797
+23:39:15,506 INFO  [Client-28,ClientThread] Sleeping for: 844
+23:39:15,501 INFO  [Client-20,ClientThread] Sleeping for: 467
+23:39:15,507 INFO  [Client-19,ClientThread] Sleeping for: 501
+23:39:15,511 INFO  [Client-26,ClientThread] Sleeping for: 216
+23:39:15,711 ERROR [Client-27,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:15,711 INFO  [Client-27,ClientThread] Client finished
+23:39:15,727 ERROR [Client-26,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:15,728 INFO  [Client-26,ClientThread] Client finished
+23:39:15,889 ERROR [Client-22,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:15,889 INFO  [Client-22,ClientThread] Client finished
+23:39:15,974 ERROR [Client-20,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:15,974 INFO  [Client-20,ClientThread] Client finished
+23:39:16,008 ERROR [Client-19,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:16,008 INFO  [Client-19,ClientThread] Client finished
+23:39:16,091 ERROR [Client-24,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:16,091 INFO  [Client-24,ClientThread] Client finished
+23:39:16,127 ERROR [Client-21,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:16,127 INFO  [Client-21,ClientThread] Client finished
+23:39:16,283 ERROR [Client-18,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:16,283 INFO  [Client-18,ClientThread] Client finished
+23:39:16,303 ERROR [Client-29,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:16,303 INFO  [Client-29,ClientThread] Client finished
+23:39:16,351 ERROR [Client-28,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:16,351 INFO  [Client-28,ClientThread] Client finished
+23:39:16,351 INFO  [main,ConnectionReleaserTest] Finished multiple clients test
+23:39:16,365 INFO  [main,ConnectionPoolManagerTest] --------------------------
+23:39:16,365 INFO  [main,ConnectionPoolManagerTest] -  CONNECTION POOL TEST  -
+23:39:16,365 INFO  [main,ConnectionPoolManagerTest] --------------------------
+23:39:16,366 INFO  [main,SetupHelper] Setting up DB
+23:39:16,570 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+23:39:16,658 INFO  [main,ConnectionPoolManagerTest] Starting getConnectionTest()
+23:39:16,659 INFO  [main,ConnectionPoolManagerTest] Finished getConnectionTest()
+23:39:16,661 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+23:39:16,735 INFO  [main,ConnectionPoolManagerTest] Starting propertiesTest()
+23:39:16,736 INFO  [main,ConnectionPoolManagerTest] Finished propertiesTest()
+23:39:16,744 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+23:39:16,782 INFO  [main,ConnectionPoolManagerTest] Starting maxConnectionsTest()
+23:39:36,790 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+23:39:36,837 INFO  [main,ConnectionPoolManagerTest] Starting releaseToPoolTest()
+23:39:36,844 DEBUG [main,ConnectionPoolManager] Failed to release a connection (Does not belong to the pool). Connection [com.mysql.jdbc.JDBC4Connection@48082751] will be closed
+	Current Capacity: 9; Specified Capacity: 20
+	Available Connections: 10; Busy Connections: 0
+23:39:36,844 ERROR [main,PoolHelper] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+23:39:36,845 INFO  [main,ConnectionPoolManagerTest] Finished releaseToPoolTest()
+23:39:36,847 INFO  [main,ConnectionPoolManagerTest] Setting up ConnectionPoolManager
+23:39:36,893 INFO  [main,ConnectionPoolManagerTest] Starting closeTest()
+23:39:36,895 DEBUG [main,ConnectionPoolManagerTest] Connection pool closed
+	Current Capacity: 20; Specified Capacity: 20
+	Available Connections: 0; Busy Connections: 0
